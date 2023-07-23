@@ -1,8 +1,8 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
+//function App() {
+//  return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -19,7 +19,20 @@ function App() {
         </a>
       </header>
     </div>
-  );
-}
+ // );
+//}
+//export default App;
+const app = () => {
+  const [search, setSearch] = useState ('');
+  return (
+    <form onSublimt= {ev =>{ev.preventDefault();
+     setSearch (ev.target.search.value);
+    }}
+    > 
 
-export default App;
+      <input type='text' name='search' autoComplete='off'></input>
+      <input type='submit'>Buscar</input>
+      <P>Resultado para: {search} </P>
+    </form>
+  );
+};
