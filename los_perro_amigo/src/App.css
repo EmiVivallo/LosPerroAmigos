@@ -43,5 +43,7 @@
   justify-content: center;
 }
 
+.gradient-background {
+  background: linear-gradient(to bottom right, #ffcc00, #ff0066);}
 
 
