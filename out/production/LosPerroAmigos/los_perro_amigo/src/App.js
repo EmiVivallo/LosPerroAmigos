@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import './index.js';
 import RegisterForm from './componentes/RegisterForm';
 
 function App() {
