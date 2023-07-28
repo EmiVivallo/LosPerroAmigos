@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import './index.js';
 import RegisterForm from './componentes/RegisterForm';
+import GradientBackground from './componentes/GradientBackground';
 
 function App() {
   return (
