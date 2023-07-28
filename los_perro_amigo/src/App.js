@@ -23,6 +23,11 @@ function App() {
       <div className="container">
         <RegisterForm />
       </div>
+      return (
+        <div>
+          <GradientBackground />
+        </div>
+  );
     </div>
   );
 }
