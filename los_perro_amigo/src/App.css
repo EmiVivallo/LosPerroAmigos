@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: linear-gradient(to bottom right, #2170F0, #191A1E);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .App-link {
@@ -39,9 +39,48 @@
 
 .container {
   flex: 1;
-  background-color: #fff;
   justify-content: center;
 }
+
+
+/* Estilos para el contenedor del formulario */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Estilos para los campos del formulario */
+.form-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  background-color: #96969c;
+  border-radius: 3px;
+}
+
+/* Estilos para el botón de registro */
+.form-button {
+  background-color: #002efa;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #0a089c;
+}
+
 
 .gradient-background {
   background: linear-gradient(to bottom right, #2170F0, #191A1E);}

@@ -6,46 +6,44 @@ const RegisterForm = () => {
   const [password, setPassword] = useState('');
 
   const handleRegister = () => {
-    // Aquí puedes enviar los datos a tu servidor para procesar el registro
-    // Por ejemplo, usando una API o un endpoint en tu backend
-    // Puedes usar fetch() o cualquier otra biblioteca de AJAX
-
-    // Una vez que los datos sean enviados exitosamente, puedes mostrar un mensaje de éxito
     alert(`¡Registro exitoso! Bienvenido, ${username}.`);
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h2>Registro</h2>
       <form>
-        <label>
+        <label className="form-label">
           Nombre de usuario:
           <input
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            className="form-input"
           />
         </label>
         <br />
-        <label>
+        <label className="form-label">
           Correo electrónico:
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="form-input"
           />
         </label>
         <br />
-        <label>
+        <label className="form-label">
           Contraseña:
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className="form-input"
           />
         </label>
         <br />
-        <button type="button" onClick={handleRegister}>
+        <button type="button" onClick={handleRegister} className="form-button">
           Registrar
         </button>
       </form>
