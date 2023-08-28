@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
+import 'firebase/auth';
+import { useFirebaseApp } from 'reactfire';
 
 const RegisterForm = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleRegister = () => {
-    alert(`¡Registro exitoso! Bienvenido, ${username}.`);
-  };
+  //const handleRegister = () => {
+    //alert(`¡Registro exitoso! Bienvenido, ${username}.`);
+  //};
+
+  const firebase = useFirebaseApp();
+
+  const submit = async () => {
+    await firebase.auth().createUserWithEmailAndPassword(email,password)
+  }
 
   return (
     <div className="form-container">
@@ -43,7 +51,7 @@ const RegisterForm = () => {
           />
         </label>
         <br />
-        <button type="button" onClick={handleRegister} className="form-button">
+        <button type="button" onClick={submit} className="form-button">
           Registrar
         </button>
       </form>
