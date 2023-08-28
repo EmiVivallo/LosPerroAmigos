@@ -15,6 +15,10 @@
   z-index: 1; /* Asegura que el componente esté por encima de otros elementos */
 }
 
+/* Estilos para el título */
+.AulasComponent h2 {
+}
+
 
 
 
