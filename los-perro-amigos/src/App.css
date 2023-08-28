@@ -36,6 +36,7 @@
   border: 1px solid #bdc3c7; /* Borde (gris más claro) */
   border-radius: 5px; /* Bordes redondeados */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: transform 0.2s; /* Transición para efecto de elevación */
 }
 
 
