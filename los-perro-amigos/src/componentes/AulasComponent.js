@@ -21,6 +21,7 @@ function AulasComponent() {
 
   return (
     <div className="AulasComponent"> {}
+      <h2 className="AulasComponent-title">Lista de Aulas y Materias</h2> {}
      
 
     
