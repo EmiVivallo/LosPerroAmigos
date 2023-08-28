@@ -29,7 +29,9 @@
   margin-top: 50px; /* Espaciado superior para dejar espacio para la parte superior del teléfono */
 }
 
-
+.AulasComponent li {
+  margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+}
 
 
 .custom-button {
