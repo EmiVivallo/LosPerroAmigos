@@ -19,6 +19,7 @@
 .AulasComponent h2 {
   font-size: 1.5rem; /* Tamaño del texto del título */
   margin-bottom: 10px; /* Espaciado inferior */
+  color: #fff; /* Color del texto (blanco) */
 }
 
 
