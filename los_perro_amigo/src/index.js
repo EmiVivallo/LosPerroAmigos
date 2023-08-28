@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import firebaseConfig from './firebase-config';
 
 import {
+  FirebaseAppProvider,
   FirebaseAppProviders
 }from 'reactfire'
 
@@ -14,7 +15,11 @@ import {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+    <Suspense fallback={'Conectando la app'}>
+      <App />
+    </Suspense>
+  </FirebaseAppProvider>
   </React.StrictMode>
 );
 
