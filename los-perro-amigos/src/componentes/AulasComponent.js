@@ -15,7 +15,9 @@ function AulasComponent() {
     setAulaAmpliada(aula);
   };
 
-  
+  const handleCloseClick = () => {
+    setAulaAmpliada(null);
+  };
 
   
 }
