@@ -12,6 +12,7 @@
   overflow: hidden; /* Oculta el contenido que desborde */
   cursor: pointer; /* Cambia el cursor al hacer clic */
   transition: transform 0.3s, width 0.3s, height 0.3s, top 0.3s, left 0.3s; /* Agrega transiciones suaves */
+  z-index: 1; /* Asegura que el componente esté por encima de otros elementos */
 }
 
 
