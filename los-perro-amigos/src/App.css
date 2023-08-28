@@ -42,7 +42,7 @@
 /* Efecto de elevación al pasar el mouse sobre un elemento de la lista */
 .AulasComponent li:hover {
   transform: translateY(-2px); /* Elevación sutil */
-
+  background-color: #d5e7f4; /* Cambia el color de fondo al pasar el mouse (azul claro) */
 }
 .custom-button {
   background-color: #e74c3c; 
