@@ -9,7 +9,11 @@ function AulasComponent() {
     { nombreAula: 'Aula 105', materia: 'Arte' },
   ];
 
-  
+  const [aulaAmpliada, setAulaAmpliada] = useState(null);
+
+  const handleAulaClick = (aula) => {
+    setAulaAmpliada(aula);
+  };
 
   
 
