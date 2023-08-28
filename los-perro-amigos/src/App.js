@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import AulasComponent from './componentes/AulasComponent'; 
 
 function App() {
   const handleButtonClick = () => {
@@ -8,8 +9,8 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={handleButtonClick}>Mi Botón</button> {/* Botón personalizado */}
-      <AulasComponent /> {/* Aquí importamos y usamos AulasComponent */}
+      <button onClick={handleButtonClick}>Mi Botón</button> {}
+      <AulasComponent /> {}
     </div>
   );
 }
