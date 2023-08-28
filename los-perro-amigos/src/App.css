@@ -11,6 +11,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra */
   overflow: hidden; /* Oculta el contenido que desborde */
   cursor: pointer; /* Cambia el cursor al hacer clic */
+  transition: transform 0.3s, width 0.3s, height 0.3s, top 0.3s, left 0.3s; /* Agrega transiciones suaves */
 }
 
 
