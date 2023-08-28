@@ -9,6 +9,7 @@
   margin: 0 auto; /* Centrar en la pantalla */
   position: relative; /* Permite el posicionamiento de elementos internos */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra */
+  overflow: hidden; /* Oculta el contenido que desborde */
 }
 
 
