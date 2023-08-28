@@ -6,9 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import firebaseConfig from './firebase-config';
 
 import {
-  FirebaseAppProvider,
-  FirebaseAppProviders
-}from 'reactfire'
+  FirebaseAppProvider
+} from'reactfire'
 
 
 
