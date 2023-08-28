@@ -39,7 +39,11 @@
   transition: transform 0.2s; /* Transición para efecto de elevación */
 }
 
+/* Efecto de elevación al pasar el mouse sobre un elemento de la lista */
+.AulasComponent li:hover {
+  transform: translateY(-2px); /* Elevación sutil */
 
+}
 .custom-button {
   background-color: #e74c3c; 
   color: white; 
