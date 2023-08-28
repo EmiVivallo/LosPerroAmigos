@@ -4,6 +4,7 @@
   border: 2px solid #2980b9; /* Borde del teléfono (azul más oscuro) */
   border-radius: 10px; /* Bordes redondeados */
   padding: 20px; /* Espaciado interno */
+  width: 375px; /* Ancho del teléfono (ancho del Samsung Galaxy S10) */
   height: 812px; /* Altura del teléfono (alto del Samsung Galaxy S10) */
 }
 
