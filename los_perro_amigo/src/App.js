@@ -8,6 +8,8 @@ import {
 } from 'reactfire';
 
 function App() {
+  const firebase = useFirebaseApp();
+  console.log(firebase);
   return (
     <div className="App">
       <header className="App-header">
