@@ -6,6 +6,7 @@
   padding: 20px; /* Espaciado interno */
   width: 375px; /* Ancho del teléfono (ancho del Samsung Galaxy S10) */
   height: 812px; /* Altura del teléfono (alto del Samsung Galaxy S10) */
+  margin: 0 auto; /* Centrar en la pantalla */
 }
 
 
