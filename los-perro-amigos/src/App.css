@@ -34,6 +34,7 @@
   background-color: #ecf0f1; /* Color de fondo de cada elemento (gris claro) */
   padding: 10px; /* Espaciado interno */
   border: 1px solid #bdc3c7; /* Borde (gris más claro) */
+  border-radius: 5px; /* Bordes redondeados */
 }
 
 
