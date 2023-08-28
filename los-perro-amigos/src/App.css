@@ -1,4 +1,6 @@
+/* Estilos para el contenedor principal del componente AulasComponent */
 .AulasComponent {
+  background: linear-gradient(to bottom, #3498db, #2980b9); /* Fondo degradado azul */
 }
 
 
