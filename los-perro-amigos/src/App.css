@@ -31,6 +31,7 @@
 
 .AulasComponent li {
   margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+  background-color: #ecf0f1; /* Color de fondo de cada elemento (gris claro) */
 }
 
 
