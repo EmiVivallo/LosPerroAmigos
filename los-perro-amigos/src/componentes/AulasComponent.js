@@ -41,7 +41,11 @@ function AulasComponent() {
       {/* Mostrar el aula ampliada */}
       {aulaAmpliada && (
         <div className="AulaAmpliada">
-          
+          <div className="AulaAmpliada-content">
+            <h2>{aulaAmpliada.nombreAula}</h2>
+            <p>Materia: {aulaAmpliada.materia}</p>
+            <button onClick={handleCloseClick}>Cerrar</button>
+          </div>
         </div>
       )}
     </div>
