@@ -22,7 +22,10 @@
   color: #fff; /* Color del texto (blanco) */
 }
 
-
+/* Estilos para la lista de aulas y materias */
+.AulasComponent ul {
+  list-style: none; /* Elimina los puntos de la lista */
+}
 
 
 
