@@ -19,7 +19,13 @@ function AulasComponent() {
     setAulaAmpliada(null);
   };
 
-  
+  return (
+    <div className="AulasComponent"> {}
+     
+
+    
+    </div>
+  );
 }
 
 export default AulasComponent;
