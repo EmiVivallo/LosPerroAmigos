@@ -3,6 +3,9 @@ import './App.css';
 import './index.js';
 import RegisterForm from './componentes/RegisterForm';
 import GradientBackground from './componentes/GradientBackground';
+import {
+  useFirebaseApp
+} from 'reactfire';
 
 function App() {
   return (
