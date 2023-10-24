@@ -1,11 +1,10 @@
 import React from "react";
 import 'firebase/auth';
 import { useFirebaseApp } from "reactfire";
-import RegisterForm from "./componentes/RegisterForm";
 
 
 
-export default {props} => {
+export default (props) => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
