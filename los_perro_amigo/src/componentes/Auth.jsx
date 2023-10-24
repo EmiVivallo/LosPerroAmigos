@@ -5,33 +5,18 @@ import { useFirebaseApp } from "reactfire";
 
 
 export default (props) => {
-    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
   
     const firebase = useFirebaseApp();
-    const submit = async () => {
-        try {
-          const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
-          alert(`¡Registro exitoso! Bienvenido, ${userCredential.user.displayName}.`);
-        } catch (error) {
-          console.error('Error al registrar el usuario', error);
-        }
-      };
+    const submit = /*async*/ () => {
+        //await firebase.auth().createUserWithEmailAndPassword(email,password)
+        console.log(email,password)
+    }
     return (
               <div className="form-container">
                 <h2>Registro</h2>
                 <form>
-                  <label className="form-label">
-                    Nombre de usuario:
-                    <input
-                      type="text"
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
-                      className="form-input"
-                    />
-                  </label>
-                  <br />
                   <label className="form-label">
                     Correo electrónico:
                     <input

@@ -7,7 +7,7 @@ import 'firebase/auth';
 import {
   useFirebaseApp
 } from 'reactfire';
-import Auth from './Auth.jsx';
+import Auth from './/componentes/Auth';
 
 function App() {
   const firebase = useFirebaseApp();
