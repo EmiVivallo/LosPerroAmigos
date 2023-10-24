@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import 'firebase/auth';
 import { useFirebaseApp } from "reactfire";
 
@@ -10,14 +10,14 @@ export default (props) => {
     const [password, setPassword] = useState('');
   
     const firebase = useFirebaseApp();
-   const submit = async () => {
-    try {
-        await firebase.auth().createUserWithEmailAndPassword(email, password);
-      alert(`¡Registro exitoso! Bienvenido, ${userCredential.user.displayName}.`);
-    } catch (error) {
-      console.error('Error al registrar el usuario', error);
-    }
-  };
+    const submit = async () => {
+        try {
+          const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
+          alert(`¡Registro exitoso! Bienvenido, ${userCredential.user.displayName}.`);
+        } catch (error) {
+          console.error('Error al registrar el usuario', error);
+        }
+      };
     return (
               <div className="form-container">
                 <h2>Registro</h2>
