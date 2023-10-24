@@ -1,9 +1,9 @@
-import React, { Suspense } from 'react';
+/*import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import firebaseConfig from './componentes/firebaseConfig';
+import firebaseConfig from './firebaseConfig';
 
 import {
   FirebaseAppProvider
@@ -19,4 +19,6 @@ ReactDOM.render((
   </React.StrictMode>
 ), document.getElementById('root'));
 
-reportWebVitals();
+reportWebVitals();*/
+
+

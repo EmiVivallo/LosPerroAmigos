@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # firebase
-/src/firebaseConfig.js
+../src/firebaseConfig.js
