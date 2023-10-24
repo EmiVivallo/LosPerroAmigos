@@ -33,12 +33,13 @@ import React from 'react';
 import './App.css';
 import './index.js';
 import GradientBackground from './componentes/GradientBackground';
+import Auth from './auth';
 
 function App () {
   return (
     <div>
       <p>usuario:</p>
-      <auth />
+      <Auth />
     </div>
   );
 }
