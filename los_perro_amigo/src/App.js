@@ -4,7 +4,10 @@ import './index.js';
 import RegisterForm from './componentes/RegisterForm';
 import GradientBackground from './componentes/GradientBackground';
 import 'firebase/auth';
-import { useFirebaseApp } from 'reactfire';
+import {
+  useFirebaseApp
+} from 'reactfire';
+import Auth from './auth';
 
 function App() {
   const firebase = useFirebaseApp();
@@ -13,7 +16,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       <div className="container">
-        <RegisterForm />
+        <Auth />
       </div>
         <div>
           <GradientBackground />
