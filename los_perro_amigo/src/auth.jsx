@@ -1,6 +1,7 @@
 import React from "react";
 import 'firebase/auth';
 import { useFirebaseApp } from "reactfire";
+import './App.css';
 
 export default (props) => {
     return (

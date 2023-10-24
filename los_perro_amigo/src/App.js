@@ -36,7 +36,10 @@ import GradientBackground from './componentes/GradientBackground';
 
 function App () {
   return (
-
+    <div>
+      <p>usuario:</p>
+      <auth />
+    </div>
   );
 }
 
