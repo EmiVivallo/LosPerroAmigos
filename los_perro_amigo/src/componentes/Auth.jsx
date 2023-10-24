@@ -10,8 +10,8 @@ export default (props) => {
   
     const firebase = useFirebaseApp();
     const submit = /*async*/ () => {
-        //await firebase.auth().createUserWithEmailAndPassword(email,password)
-        console.log(email,password)
+        firebase.auth().createUserWithEmailAndPassword(email,password)
+        //console.log(email,password)
     }
     return (
               <div className="form-container">
