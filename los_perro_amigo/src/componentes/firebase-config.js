@@ -1,3 +1,4 @@
+
 export default {
     apiKey: "AIzaSyC5bn_hytd-4dKrm5-aehbf6RrwgBuJHPI",
     authDomain: "losperroamigos-ef2cc.firebaseapp.com",

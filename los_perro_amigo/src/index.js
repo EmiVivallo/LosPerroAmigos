@@ -9,16 +9,15 @@ import {
   FirebaseAppProvider
 }from 'reactfire'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render((
   <React.StrictMode>
-  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
-    <Suspense fallback={'Conectando la app'}>
+  <FirebaseAppProvider firebaseConfig = {firebaseConfig}>
+    <Suspense fallback={'Conectando la app...'}>
       <App />
     </Suspense>
   </FirebaseAppProvider>
   </React.StrictMode>
-);
+), document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
