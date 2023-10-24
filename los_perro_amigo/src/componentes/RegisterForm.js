@@ -6,30 +6,6 @@ import'firebase/auth';
 
 
 const RegisterForm = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  //const handleRegister = () => {
-    //alert(`¡Registro exitoso! Bienvenido, ${username}.`);
-  //};
-
-  const firebase = useFirebaseApp();
-
-  //const submit = async () => {
-   // await firebase.auth().createUserWithEmailAndPassword(email,password)
- // }
- const submit = async () => {
-  try {
-    const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
-    alert(`¡Registro exitoso! Bienvenido, ${userCredential.user.displayName}.`);
-  } catch (error) {
-    console.error('Error al registrar el usuario', error);
-  }
-};
-
-  
-
   return (
     <div className="form-container">
       <h2>Registro</h2>
