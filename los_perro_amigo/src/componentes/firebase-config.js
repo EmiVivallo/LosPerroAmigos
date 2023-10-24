@@ -1,5 +1,6 @@
+import 'firebase/auth';
 
-export default {
+const configf = {
     apiKey: "AIzaSyC5bn_hytd-4dKrm5-aehbf6RrwgBuJHPI",
     authDomain: "losperroamigos-ef2cc.firebaseapp.com",
     projectId: "losperroamigos-ef2cc",
@@ -8,3 +9,5 @@ export default {
     appId: "1:498931176498:web:7323b5557471db5366982b",
     measurementId: "G-KEPL7PVE73"
   };
+
+export default configf;
