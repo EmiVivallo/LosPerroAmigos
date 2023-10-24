@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import '@firebase/auth';
 import { useFirebaseApp } from 'reactfire';
+import 'firebase/auth';
+
 
 const RegisterForm = () => {
   const [username, setUsername] = useState('');
@@ -13,17 +14,17 @@ const RegisterForm = () => {
 
   const firebase = useFirebaseApp();
 
-  const submit = async () => {
-    await firebase.auth().createUserWithEmailAndPassword(email,password)
-  }
   //const submit = async () => {
-   // try {
-      //await firebase.auth().createUserWithEmailAndPassword(email, password);
-     // alert(`¡Registro exitoso! Bienvenido, ${username}.`);
-   // } catch (error) {
-    //  console.error('Error al registrar el usuario', error);
-   // }
-  //};
+   // await firebase.auth().createUserWithEmailAndPassword(email,password)
+ // }
+    const submit = async () => {
+      try {
+        await firebase.auth().createUserWithEmailAndPassword(email, password);
+        alert(`¡Registro exitoso! Bienvenido, ${username}.`);
+      } catch (error) {
+        console.error('Error al registrar el usuario', error);
+      }
+    };
   
 
   return (
