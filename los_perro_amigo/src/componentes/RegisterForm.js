@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import { useFirebaseApp } from 'reactfire';
 
 import'firebase/auth';
@@ -48,4 +48,4 @@ const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;
+export default RegisterForm;*/
