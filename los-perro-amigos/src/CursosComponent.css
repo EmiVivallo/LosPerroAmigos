@@ -20,7 +20,9 @@
     color: #fff; 
   }
   
- 
+  .HorarioComponent ul {
+    list-style: none; 
+  }
   
  
 
