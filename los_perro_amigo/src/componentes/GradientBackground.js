@@ -1,4 +1,4 @@
-/*import React from 'react';
+import React from 'react';
 
 const GradientBackground = () => {
   return (
@@ -8,4 +8,4 @@ const GradientBackground = () => {
   );
 };
 
-export default GradientBackground;*/
+export default GradientBackground;

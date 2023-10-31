@@ -1,17 +1,19 @@
 
 
 
-import { useState } from react;
+import React, { useState } from 'react';
+
 import "./App.css";
 
 //Modulos de firebase
 import appFirebase from "../src/firebaseConfig";
 import {getAuth, onAuthStateChanged} from "firebase/auth";
+//Componentes
+import Login from "./componentes/Login.js"
+import Home from "./componentes/Home.js";
 const auth = getAuth(appFirebase);
 
-//Componentes
-import Login from "./componentes/Login"
-import Home from "./componentes/Home";
+
 
 function App() {
 
