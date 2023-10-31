@@ -8,21 +8,18 @@ const Login = () => {
 
     <div className="form_container">
       <div className="formGrup">
-        <input type="email" className="formInp" placeholder="Correo electrónico" />
+        <input type="email" className="formInp" placeholder="" />
         <label className="formLab">Correo electrónico:</label>
       </div>
 
       <div className="formGrup">
-        <input type="password" className="formInp" placeholder="Contraseña" />
+        <input type="password" className="formInp" placeholder="" />
         <label className="formLab">Contraseña:</label>
       </div>
 
       <button type="button" className="formSub boton-ani">Registrar</button>
     </div>
   </form>
-  <div id="formfin">
-    <p>¿Ya tienes una cuenta? <a href="#">Iniciar sesión</a></p>
-  </div>
 </div>
 
         /*<div className="form-container">
