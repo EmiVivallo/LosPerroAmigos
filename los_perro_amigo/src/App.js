@@ -44,6 +44,14 @@ import Home from "./componentes/Home";
 
 function App() {
 
+  const [usuario, setUsuario] = useState (null)
+
+  onAuthStateChanged(auth, (usuarioFirebase)=>{
+    if (usuarioFirebase) {
+      setUsuario(usuarioFirebase)
+    }
+  })
+
   return {
 
   }
