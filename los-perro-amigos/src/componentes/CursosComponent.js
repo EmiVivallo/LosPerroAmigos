@@ -14,7 +14,8 @@ function CursosComponent() {
     setHorarioAmpliada(horario);
   };
 
- 
+  const handleCloseClick = () => {
+  };
 
  
 }
