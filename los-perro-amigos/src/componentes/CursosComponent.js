@@ -21,7 +21,12 @@ function CursosComponent() {
   return (
     <div className="HorarioComponent"> {}
       <h2 className="HorarioComponent-title">Lista de Cursos y Turnos</h2> {}
-      
+      <ul className="HorarioComponent-list"> {}
+          
+        ))}
+      </ul>
+
+      {}
       {horarioAmpliada && (
         <div className="HorarioAmpliada">
           <div className="HorarioAmpliada-content">
