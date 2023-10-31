@@ -10,7 +10,8 @@ function CursosComponent() {
 
   const [horarioAmpliada, setHorarioAmpliada] = useState(null);
 
-  
+  const handleHorarioClick = (horario) => {
+  };
 
  
 
