@@ -52,3 +52,101 @@
 .form-button:hover {
   background-color: #0a089c;
 }
+
+/*formulario*/
+
+form {
+  background-color: white;
+  margin-top: 200px;
+  margin-left: 500px;
+  margin-bottom: 20px;
+  padding: 56px 32px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 10px -5px rgb(0 0 0 /40%);
+  text-align: center;
+}
+
+/*Titulo formulario*/
+.formTit {
+  font-size: 30px;
+  margin-bottom: .80px;
+}
+
+/*Descripcion*/
+.formP {
+  font-weight: 300;
+}
+
+/*Container formulario */
+
+.form_container {
+  margin: auto;
+  display: grid;
+  gap: 30px;
+}
+
+/*Grupos formulario*/
+
+.formGrup {
+  color: black ;
+  position: relative;
+}
+
+/*Input*/
+.formInp {
+  width: 100%;
+  color: #706c6c;
+  font-size: 15px;
+  padding: 10px 48px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+
+/*Label*/
+.formLab {
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 0%;
+  left: 5px;
+  transform: translateY(10px);
+  transition: transform .5s, color .3s;
+}
+
+/*Movimiento label*/
+
+.formInp:focus + .formLab, .formInp:not(:placeholder-shown) + .formLab {
+  transform: translateY(-12px) scale(.7);
+  color: black;
+}
+
+/*Boton*/
+
+.formSub {
+  background: #3866f2;
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 5px 0px;
+  border: 1px black solid;
+  border-radius: 15px;
+}
+
+/*Div FormFin*/
+
+#formfin {
+  position: relative;
+  margin: auto;
+  padding: 10px;
+  max-height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
