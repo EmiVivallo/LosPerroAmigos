@@ -8,6 +8,7 @@ function CursosComponent() {
     { TurnoAula: 'Turno ', hs: 'Vespertino' },
   ];
 
+  const [horarioAmpliada, setHorarioAmpliada] = useState(null);
 
   
 
