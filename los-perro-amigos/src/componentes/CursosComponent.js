@@ -24,7 +24,8 @@ function CursosComponent() {
       
       {horarioAmpliada && (
         <div className="HorarioAmpliada">
-        
+          <div className="HorarioAmpliada-content">
+          </div>
         </div>
       )}
     </div>
