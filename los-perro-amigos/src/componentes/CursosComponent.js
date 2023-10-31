@@ -23,7 +23,9 @@ function CursosComponent() {
       <h2 className="HorarioComponent-title">Lista de Cursos y Turnos</h2> {}
       
       {horarioAmpliada && (
+        <div className="HorarioAmpliada">
         
+        </div>
       )}
     </div>
   );
