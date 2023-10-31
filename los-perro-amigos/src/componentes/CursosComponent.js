@@ -23,7 +23,12 @@ function CursosComponent() {
       <h2 className="HorarioComponent-title">Lista de Cursos y Turnos</h2> {}
       <ul className="HorarioComponent-list"> {}
         {horario.map((Curso, Horario, hs) => (
-          
+          <li
+            className="HorarioComponent-item"
+            onClick={() => handleHorarioClick(Horario)}
+          >
+            <strong>Cursada:</strong> {Curso.TurnoAula}, <strong>Horario:</strong> {Curso.hs}
+          </li>
         ))}
       </ul>
 
