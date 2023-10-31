@@ -26,6 +26,7 @@ function CursosComponent() {
         <div className="HorarioAmpliada">
           <div className="HorarioAmpliada-content">
             <h2>{horarioAmpliada.nombreHorario}</h2>
+            <p>Turno: {horarioAmpliada.hs}</p>
             <button onClick={handleCloseClick}>Cerrar</button>
           </div>
         </div>
