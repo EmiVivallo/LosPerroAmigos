@@ -7,12 +7,14 @@ function App() {
     alert('¡Botón personalizado clickeado!');
   };
 
+
   return (
     <div className="App">
       <button onClick={handleButtonClick}>Mi Botón</button> {}
       <AulasComponent /> {}
     </div>
   );
-}
+  }  
+
 
 export default App;
