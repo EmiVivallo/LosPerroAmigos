@@ -15,6 +15,7 @@ function CursosComponent() {
   };
 
   const handleCloseClick = () => {
+    setHorarioAmpliada(null);
   };
 
  
