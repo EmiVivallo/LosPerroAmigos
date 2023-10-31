@@ -1,6 +1,8 @@
-import React, {useState} from "react";
+/*import React, {useState} from "react";
 import 'firebase/auth';
 import { useFirebaseApp } from "reactfire";
+import firebaseConfig from './firebaseConfig';
+
 
 
 
@@ -9,8 +11,8 @@ export default (props) => {
     const [password, setPassword] = useState('');
   
     const firebase = useFirebaseApp();
-    const submit = /*async*/ () => {
-        firebase.auth().createUserWithEmailAndPassword(email,password)
+    const submit = async () => {
+        await firebase.auth().createUserWithEmailAndPassword(email,password)
         //console.log(email,password)
     }
     return (
@@ -43,4 +45,4 @@ export default (props) => {
                 </form>
               </div>
             );
-          }
+          }*/

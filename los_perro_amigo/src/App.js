@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import './App.css';
 import './index.js';
 //import RegisterForm from './componentes/RegisterForm';
@@ -27,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/

@@ -1,4 +1,4 @@
-.App {
+/*.App {
   text-align: center;
 }
 
@@ -40,11 +40,11 @@
 .container {
   flex: 1;
   justify-content: center;
-}
+}*/
 
 
 /* Estilos para el contenedor del formulario */
-.form-container {
+/*.form-container {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -52,7 +52,7 @@
 }
 
 /* Estilos para los campos del formulario */
-.form-label {
+/*.form-label {
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
@@ -68,7 +68,7 @@
 }
 
 /* Estilos para el botón de registro */
-.form-button {
+/*.form-button {
   background-color: #002efa;
   color: white;
   padding: 10px 15px;
@@ -83,6 +83,6 @@
 
 
 .gradient-background {
-  background: linear-gradient(to bottom right, #2170F0, #191A1E);}
+  background: linear-gradient(to bottom right, #2170F0, #191A1E);}*/
 
 
