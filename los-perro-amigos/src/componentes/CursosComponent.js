@@ -12,5 +12,6 @@ function CursosComponent() {
  
 }
 
+export default CursosComponent;
 
 
