@@ -30,20 +30,22 @@ function App() {
 export default App;*/
 
 
-import { useState } from react
-import "./App.css"
+import { useState } from react;
+import "./App.css";
 
 //Modulos de firebase
-import appFirebase from "../src/firebaseConfig"
-import {getAuth, onAuthStateChanged} from "firebase/auth"
-cons auth = getAuth(appFirebase)
+import appFirebase from "../src/firebaseConfig";
+import {getAuth, onAuthStateChanged} from "firebase/auth";
+const auth = getAuth(appFirebase);
+
+//Componentes
+import Login from "../src/componentes/Login"
+import Home from "./componentes/Home";
 
 function App() {
 
   return {
-    <div>
 
-    </div>
   }
 }
 
