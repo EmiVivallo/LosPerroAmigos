@@ -1,7 +1,10 @@
 /* Estilos para el contenedor principal */
 .App {
   text-align: center;
+}
 
+.App-header {
+  background: linear-gradient(to bottom right, #2170F0, #191A1E);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,81 +15,50 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #000033, #000000); 
-  margin: 0;
-  overflow: hidden;
+  background: linear-gradient(to bottom, #000033, #000000); /* Fondo con degradado de azul oscuro a negro */
+  margin: 140px; /* Añade esto para eliminar el margen predeterminado del body */
 }
 
 /* Estilos para el formulario */
-.formu {
-  max-width: 35%;
-  margin: auto;
-  margin-top: 10%;
-  padding: 5px 20px;
-  border-radius: 5px;
-  background-color: rgba(14, 44, 99, 0.8); /* Fondo con degradado de azul oscuro a negro */
-  box-shadow: 20px 20px 20px rgba(47, 50, 226, 0.1); /* Sombra para el contenedor */
+.form-container {
+  max-width: 400px;
+  color: white;
   text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  background: rgba(10, 10, 78, 0.226); /* Fondo blanco para el contenedor */
+  box-shadow: 0 0 20px rgb(255, 255, 255); /* Sombra para el contenedor */
 }
 
-/*Titulo formulario*/
-.formTit {
-  font-size: 36px; /* Aumento del tamaño del título */
-  margin-bottom: 40px; /* Aumento del espacio entre el título y los campos */
-  font-weight: bold; /* Poner en negrita */
-  text-align: center;
+/* Estilos para los campos del formulario */
+.form-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
   color: white;
 }
 
-/*Container formulario */
-.form_container {
-  display: grid;
-  gap: 25px;
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 2px solid #000000;
+  border-radius: 30px;
 }
 
-/*Grupos formulario*/
-.formGrup {
-  position: relative;
-}
-
-/*Input*/
-.formInp {
-  width: 95%;
-  color: #575353;
-  font-size: 15px;
-  padding: 10px;
-  border: 1px solid #d7d7da;
-  border-radius: 20px;
-  outline: none;
-}
-
-/*Label*/
-.formLab {
-  color: black;
-  cursor: pointer;
-  font-weight: bold; /* Poner en negrita */
-  position: absolute;
-  top: 0%;
-  left: 5px;
-  transform: translateY(10px);
-  transition: transform 0.5s, color 0.3s;
-}
-
-/*Movimiento label*/
-.formInp:focus + .formLab,
-.formInp:not(:placeholder-shown) + .formLab {
-  transform: translateY(-24px) scale(0.7);
-  color: black;
-}
-
-/*Boton*/
-.formSub {
+/* Estilos para el botón de registro */
+.form-button {
   background-color: #002efa;
   color: white;
-  padding: 10px;
-  max-width: 100px;
-  margin-left: 200px;
+  padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
+
+.form-button:hover {
+  background-color: #0a089c;
+}
+
+
