@@ -20,7 +20,7 @@ function CursosComponent() {
 
   return (
     <div className="HorarioComponent"> {}
-      
+      <h2 className="HorarioComponent-title">Lista de Cursos y Turnos</h2> {}
       
       
     </div>
