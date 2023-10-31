@@ -19,7 +19,11 @@ function CursosComponent() {
   };
 
   return (
-   
+    <div className="HorarioComponent"> {}
+      
+      
+      
+    </div>
   );
 }
 
