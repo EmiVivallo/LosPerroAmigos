@@ -18,7 +18,9 @@ function CursosComponent() {
     setHorarioAmpliada(null);
   };
 
- 
+  return (
+   
+  );
 }
 
 export default CursosComponent;
