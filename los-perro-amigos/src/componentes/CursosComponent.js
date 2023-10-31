@@ -32,7 +32,6 @@ function CursosComponent() {
         ))}
       </ul>
 
-      {}
       {horarioAmpliada && (
         <div className="HorarioAmpliada">
           <div className="HorarioAmpliada-content">
