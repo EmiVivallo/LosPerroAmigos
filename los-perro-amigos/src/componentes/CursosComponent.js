@@ -4,6 +4,7 @@ import '../CursosComponent.css';
 function CursosComponent() {
   const horario = [
     { TurnoAula: 'Turno ', hs: 'Mañana' },
+    { TurnoAula: 'Turno ', hs: 'Tarde' },
   ];
 
 
