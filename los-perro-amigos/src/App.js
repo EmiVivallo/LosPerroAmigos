@@ -3,6 +3,7 @@ import './App.css';
 import AulasComponent from './componentes/AulasComponent'; 
 import CursosComponent from './componentes/CursosComponent';
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom"
+import Button from './componentes/boton';
 
 function App() {
   <BrowserRouter>
@@ -16,11 +17,12 @@ function App() {
 
     <div className="App">
      <BrowserRouter>
-    <NavLink to="/teoria"> <button onClick={handleButtonClick}>Teoria</button> {}</NavLink>
-    <NavLink to="/taller"> <button onClick={handleButtonClick}>Taller</button> {}</NavLink>
-  </BrowserRouter>
-      <CursosComponent className="CursosComponent"/> {}
-      <AulasComponent /> {}
+        <Routes>
+          <Route path='/' element={<Button/>}></Route>
+          <Route path='/teoria' element={<CursosComponent/>}></Route>
+          <Route path='/aulas' element={<AulasComponent/>}></Route>
+        </Routes> 
+      </BrowserRouter>
     </div>
   );
   }  

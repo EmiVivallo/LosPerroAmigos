@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 function AulasComponent() {
   // Definimos un array de objetos que representan las aulas y las materias

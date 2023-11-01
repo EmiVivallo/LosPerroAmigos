@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../CursosComponent.css';
+import { Link } from 'react-router-dom';
 
 function CursosComponent() {
   const horario = [
@@ -27,7 +28,9 @@ function CursosComponent() {
             className="HorarioComponent-item"
             onClick={() => handleHorarioClick(Horario)}
           >
-            <strong>Cursada:</strong> {Curso.TurnoAula}, <strong>Horario:</strong> {Curso.hs}
+            <Link to="/aulas" className='link'>
+              <strong>Cursada:</strong> {Curso.TurnoAula}, <strong>Horario:</strong> {Curso.hs}
+            </Link>
           </li>
         ))}
       </ul>
