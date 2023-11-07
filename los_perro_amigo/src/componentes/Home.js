@@ -1,8 +1,8 @@
 import React from "react"
 
-const Home = () => {
+const Home = ({correoUsuario}) => {
     return (
-        <h2>Bienvenido</h2>
+        <h2 className="h22">Bienvenido usuario {correoUsuario} </h2>
     )
 }
 

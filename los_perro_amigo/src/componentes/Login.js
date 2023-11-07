@@ -37,10 +37,10 @@ const Login = () => {
                     <input type="password" className="form-input" id="password" />
                   <br />
                   <div className="titf">
-                  <button type="button" className="form-button"> {registrando ? "Registrate" : "Inicia Sesion"} </button></div>
+                  <button className="form-button"> {registrando ? "Registrate" : "Inicia Sesion"} </button></div>
                 </form>
                 <h4 className="formh4">{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<button className="button2" onClick={()=>setRegistrando(!registrando)}>{registrando ? "Inicia sesion" : "Registrate"}</button></h4>
-              </div>
+        </div>
     )
 }
 

@@ -75,3 +75,10 @@ body {
   border: none;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }   
+
+/* Estilos para el home */
+
+.h22 {
+  color: white;
+  font-size: xx-large;
+}
