@@ -13,7 +13,13 @@ const Login = () => {
         e.preventDefault();
         const correo = e.target.email.value;
         const contraseña = e.target.password.value;
-        
+
+        if (registrando) {
+            await createUserWithEmailAndPassword(auth, correo, contraseña)
+        }
+        else{
+            await signInWithEmailAndPassword(auth, correo, contraseña)
+        }
     }
 
     return (
