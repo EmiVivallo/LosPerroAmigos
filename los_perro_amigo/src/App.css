@@ -19,10 +19,11 @@ body {
 
 /* Estilos para el formulario */
 .form-container {
+  align-items: center;
   max-width: 35%;
   color: white;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
   background: rgba(10, 10, 78, 0.226); /* Fondo blanco para el contenedor */
   box-shadow: 0 0 20px rgb(255, 255, 255); /* Sombra para el contenedor */
@@ -62,7 +63,7 @@ body {
 }
 
 .formh4 {
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 2%;
   font-family: 'Times New Roman', Times, serif;
   font-size: small;
@@ -82,3 +83,32 @@ body {
   color: white;
   font-size: xx-large;
 }
+
+/* Boton Google */
+
+.googleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4285f4; /* Color principal de Google */
+  color: #fff;
+  border: none;
+  max-height: 35px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.googleButton:hover {
+  background-color: #357ae8; /* Color de fondo al pasar el mouse */
+}
+
+.googleButton::before {
+  content: "G"; /* Agrega la letra "G" como contenido antes del botón */
+  font-size: 24px; /* Tamaño de fuente */
+  font-weight: bold; /* Poner en negrita */
+  margin-right: 10px; /* Espacio a la derecha del "G" */
+}
+
