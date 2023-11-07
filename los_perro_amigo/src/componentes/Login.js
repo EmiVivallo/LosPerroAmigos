@@ -9,13 +9,16 @@ const Login = () => {
 
     const [registrando, setRegistrando] = useState(false)
 
+    const functAutenticacion = async(e) => {
+        e.preventDefault();
+    }
 
     return (
         <div className="form-container">
             <div className="titf">
                 <h2>Registro</h2>
             </div>
-                <form>
+                <form onSubmit={functAutenticacion}>
                   <label className="form-label">
                     Correo electrónico:</label>
                     <input type="email" className="form-input" id="email" />
