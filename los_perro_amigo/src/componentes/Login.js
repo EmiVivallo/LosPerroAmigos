@@ -1,7 +1,9 @@
 import React, { useState } from "react"
 
 import appFirebase from "../firebaseConfig"
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
+
+const auth = getAuth(appFirebase)
 
 const Login = () => {
 
@@ -22,8 +24,9 @@ const Login = () => {
                     <input type="password" className="form-input" />
                   <br />
                   <div className="titf">
-                  <button type="button" className="form-button"> Registrar </button></div>
+                  <button type="button" className="form-button"> {registrando ? "Registrate" : "Inicia Sesion"} </button></div>
                 </form>
+                <h4>{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<button>Iniciar sesion</button></h4>
               </div>
     )
 }
