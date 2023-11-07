@@ -9,6 +9,7 @@ const Login = () => {
 
     const [registrando, setRegistrando] = useState(false)
 
+
     return (
         <div className="form-container">
             <div className="titf">
@@ -17,11 +18,11 @@ const Login = () => {
                 <form>
                   <label className="form-label">
                     Correo electrónico:</label>
-                    <input type="email" className="form-input" />
+                    <input type="email" className="form-input" id="email" />
                   <br />
                   <label className="form-label">
                     Contraseña:</label>
-                    <input type="password" className="form-input" />
+                    <input type="password" className="form-input" id="password" />
                   <br />
                   <div className="titf">
                   <button type="button" className="form-button"> {registrando ? "Registrate" : "Inicia Sesion"} </button></div>

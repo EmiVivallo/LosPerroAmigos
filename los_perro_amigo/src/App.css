@@ -4,7 +4,6 @@
 }
 
 .App-header {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +14,7 @@
 
 body {
   background: linear-gradient(to bottom, #000033, #000000); /* Fondo con degradado de azul oscuro a negro */
-  margin: 160px; /* Añade esto para eliminar el margen predeterminado del body */
+  margin: 140px; /* Añade esto para eliminar el margen predeterminado del body */
 }
 
 /* Estilos para el formulario */
@@ -63,17 +62,16 @@ body {
 }
 
 .formh4 {
+  margin-top: 5px;
   margin-left: 2%;
   font-family: 'Times New Roman', Times, serif;
   font-size: small;
 }
 .button2 {
+  margin-top: 2px;
   background: rgba(10, 10, 78, 0.226); 
   color: lightblue;
-  margin-left: 2%;
   cursor: pointer;
   border: none;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  box-shadow: 0 0 5px rgb(137, 190, 233);
-  border-radius: 50px;
 }   
