@@ -11,6 +11,9 @@ const Login = () => {
 
     const functAutenticacion = async(e) => {
         e.preventDefault();
+        const correo = e.target.email.value;
+        const contraseña = e.target.password.value;
+        
     }
 
     return (
