@@ -14,7 +14,7 @@
 
 body {
   background: linear-gradient(to bottom, #000033, #000000); /* Fondo con degradado de azul oscuro a negro */
-  margin: 140px; /* Añade esto para eliminar el margen predeterminado del body */
+  margin: 110px; /* Añade esto para eliminar el margen predeterminado del body */
 }
 
 /* Estilos para el formulario */
@@ -90,7 +90,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #4285f4; /* Color principal de Google */
+  background-color: #f44e42; /* Color principal de Google */
   color: #fff;
   border: none;
   max-height: 35px;
@@ -102,7 +102,7 @@ body {
 }
 
 .googleButton:hover {
-  background-color: #357ae8; /* Color de fondo al pasar el mouse */
+  background-color: #b83f1a; /* Color de fondo al pasar el mouse */
 }
 
 .googleButton::before {
@@ -118,7 +118,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #4285f4; /* Color principal de Google */
+  background-color: #699bec; /* Color principal de Google */
   color: #fff;
   border: none;
   max-height: 35px;
@@ -127,10 +127,11 @@ body {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 4px;
 }
 
 .gitButton:hover {
-  background-color: #357ae8; /* Color de fondo al pasar el mouse */
+  background-color: #3e66a5; /* Color de fondo al pasar el mouse */
 }
 
 .gitButton::before {
@@ -138,5 +139,12 @@ body {
   font-size: 24px; /* Tamaño de fuente */
   font-weight: bold; /* Poner en negrita */
   margin-right: 10px; /* Espacio a la derecha del "G" */
+  color: black;
 }
 
+/*Responsive*/
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 100%;
+  }
+}
