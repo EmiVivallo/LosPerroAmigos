@@ -15,10 +15,19 @@ const Login = () => {
         const contraseña = e.target.password.value;
 
         if (registrando) {
-            await createUserWithEmailAndPassword(auth, correo, contraseña)
+            try {
+                await createUserWithEmailAndPassword(auth, correo, contraseña)
+            } catch (error) {
+                alert("Asegurese que la contraseña tenga mas de 8 caracteres")
+            }
         }
         else{
-            await signInWithEmailAndPassword(auth, correo, contraseña)
+            try {
+                await signInWithEmailAndPassword(auth, correo, contraseña)
+            } catch (error) {
+                alert("El correo o la contraseña son incorrectos")
+            }
+            
         }
     }
 
