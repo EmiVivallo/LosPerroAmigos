@@ -2,7 +2,9 @@ import React, { useState } from "react"
 
 import appFirebase from "../firebaseConfig"
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
+const provider = new GoogleAuthProvider();
 
 const auth = getAuth(appFirebase)
 
@@ -86,6 +88,8 @@ const Login = () => {
                   <button className="form-button"> {registrando ? "Registrate" : "Inicia Sesion"} </button></div>
                 </form>
                 <h4 className="formh4">{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<button className="button2" onClick={()=>setRegistrando(!registrando)}>{registrando ? "Inicia sesion" : "Registrate"}</button></h4>
+                <button className="googleButton" onClick={loginGoogle}>Iniciar Sesión con Google</button>
+
         </div>
     )
 }
