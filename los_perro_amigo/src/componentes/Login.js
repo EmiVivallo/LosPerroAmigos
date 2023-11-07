@@ -15,21 +15,28 @@ const Login = () => {
         const contraseña = e.target.password.value;
 
         if (registrando) {
+            const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^.&*])(?=.*[A-Z]).{8,}$/;
+                if (!passwordRegex.test(contraseña)) {
+                     alert("Asegúrese de que la contraseña cumpla con los requisitos:\n- Al menos 8 caracteres\n- Al menos un número\n- Al menos un símbolo (!@#$%^&*)\n- Al menos una letra mayúscula");
+                     return; // Detener el proceso de registro
+                  }
+          
             try {
-                await createUserWithEmailAndPassword(auth, correo, contraseña)
+              await createUserWithEmailAndPassword(auth, correo, contraseña);
+              // Registro exitoso
             } catch (error) {
-                alert("Asegurese que la contraseña tenga mas de 8 caracteres")
+              alert("Ocurrió un error durante el registro.");
             }
-        }
-        else{
+          } else {
             try {
-                await signInWithEmailAndPassword(auth, correo, contraseña)
+              await signInWithEmailAndPassword(auth, correo, contraseña);
+              // Inicio de sesión exitoso
             } catch (error) {
-                alert("El correo o la contraseña son incorrectos")
+              alert("El correo o la contraseña son incorrectos.");
             }
-            
+          }
         }
-    }
+          
 
     return (
         <div className="form-container">
