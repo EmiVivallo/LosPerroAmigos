@@ -4,7 +4,6 @@
 }
 
 .App-header {
-  background: linear-gradient(to bottom right, #2170F0, #191A1E);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,19 +15,21 @@
 
 body {
   background: linear-gradient(to bottom, #000033, #000000); /* Fondo con degradado de azul oscuro a negro */
-  margin: 140px; /* Añade esto para eliminar el margen predeterminado del body */
+  margin: 160px; /* Añade esto para eliminar el margen predeterminado del body */
 }
 
 /* Estilos para el formulario */
 .form-container {
-  max-width: 400px;
+  max-width: 35%;
   color: white;
-  text-align: center;
   margin: 0 auto;
   padding: 20px;
   border-radius: 5px;
   background: rgba(10, 10, 78, 0.226); /* Fondo blanco para el contenedor */
   box-shadow: 0 0 20px rgb(255, 255, 255); /* Sombra para el contenedor */
+}
+.titf {
+  text-align: center;
 }
 
 /* Estilos para los campos del formulario */
@@ -40,10 +41,9 @@ body {
 }
 
 .form-input {
-  width: 100%;
+  width: 95%;
   padding: 8px;
   margin-bottom: 10px;
-  border: 2px solid #000000;
   border-radius: 30px;
 }
 
@@ -55,6 +55,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 0 5px rgb(255, 255, 255); /* Sombra para el contenedor */
 }
 
 .form-button:hover {
