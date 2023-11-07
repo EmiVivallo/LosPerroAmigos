@@ -1,6 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
+
+import appFirebase from "../firebaseConfig"
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
 
 const Login = () => {
+
+    const [registrando, setRegistrando] = useState(false)
+
     return (
         <div className="form-container">
             <div className="titf">
