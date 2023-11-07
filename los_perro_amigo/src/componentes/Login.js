@@ -15,6 +15,12 @@ const Login = () => {
         const contraseña = e.target.password.value;
 
         if (registrando) {
+            const correoRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                if (!correoRegex.test(correo)) {
+                    alert("El correo electrónico no es válido. Por favor, ingrese un correo válido.");
+                    return; // Detener el proceso de registro
+                }
+                
             const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^.&*])(?=.*[A-Z]).{8,}$/;
                 if (!passwordRegex.test(contraseña)) {
                      alert("Asegúrese de que la contraseña cumpla con los requisitos:\n- Al menos 8 caracteres\n- Al menos un número\n- Al menos un símbolo (!@#$%^&*)\n- Al menos una letra mayúscula");
