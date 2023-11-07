@@ -26,7 +26,7 @@ const Login = () => {
                   <div className="titf">
                   <button type="button" className="form-button"> {registrando ? "Registrate" : "Inicia Sesion"} </button></div>
                 </form>
-                <h4>{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<button>Iniciar sesion</button></h4>
+                <h4 className="formh4">{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<button className="button2">{registrando ? "Inicia sesion" : "Registrate"}</button></h4>
               </div>
     )
 }

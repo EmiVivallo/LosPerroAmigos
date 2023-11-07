@@ -62,4 +62,18 @@ body {
   background-color: #0a089c;
 }
 
-
+.formh4 {
+  margin-left: 2%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+}
+.button2 {
+  background: rgba(10, 10, 78, 0.226); 
+  color: lightblue;
+  margin-left: 2%;
+  cursor: pointer;
+  border: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-shadow: 0 0 5px rgb(137, 190, 233);
+  border-radius: 50px;
+}   
