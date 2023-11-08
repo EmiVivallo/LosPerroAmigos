@@ -96,10 +96,11 @@ const Login = () => {
 
     return (
         <div className="form-container">
-            <div className="titf">
-                <h2>Registro</h2>
-            </div>
+            
                 <form onSubmit={functAutenticacion}>
+                  <div className="titf">
+                  <h2>{registrando ? "Registrate" : "Inicia Sesion"}</h2>
+                  </div>
                   <label className="form-label">
                     Correo electrónico:</label>
                     <input type="email" className="form-input" id="email" />
