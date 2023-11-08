@@ -99,6 +99,7 @@ const Login = () => {
             
                 <form onSubmit={functAutenticacion}>
                   <div className="titf">
+                  <h2>{registrando ? " " : "Bienvenido de nuevo"}</h2>
                   <h2>{registrando ? "Registrate" : "Inicia Sesion"}</h2>
                   </div>
                   <label className="form-label">
@@ -110,8 +111,8 @@ const Login = () => {
                     <input type="password" className="form-input" id="password" />
                   <br />
                   <div className="titf">
-                  <button className="form-button"> {registrando ? "Registrate" : "Inicia Sesion"} </button></div>
-                  <h2>{registrando ? " " : "Bienvenido de nuevo"}</h2>
+                  <button className="form-button"> {registrando ? "Registrate" : "Inicia Sesion"} </button>
+                  </div>
                 </form>
                 <h4 className="formh4">{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<button className="button2" onClick={()=>setRegistrando(!registrando)}>{registrando ? "Inicia sesion" : "Registrate"}</button></h4>
                 
