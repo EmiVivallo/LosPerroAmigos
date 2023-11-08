@@ -12,15 +12,6 @@ const auth = getAuth(appFirebase)
 
 const Login = () => {
 
-  const [showModal, setShowModal] = useState(false);
-  const openModal = () => {
-    setShowModal(true);
-  };
-
-  // Función para cerrar el modal
-  const closeModal = () => {
-    setShowModal(false);
-  };
     function loginGithub() {
         signInWithPopup(auth, providerGithub)
         .then((result) => {
@@ -120,10 +111,9 @@ const Login = () => {
                   <br />
                   <div className="titf">
                   <button className="form-button"> {registrando ? "Registrate" : "Inicia Sesion"} </button></div>
+                  <h2>{registrando ? " " : "Bienvenido de nuevo"}</h2>
                 </form>
                 <h4 className="formh4">{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<button className="button2" onClick={()=>setRegistrando(!registrando)}>{registrando ? "Inicia sesion" : "Registrate"}</button></h4>
-                
-                <button class="terms-button" onclick="openModal()">Ver Términos y Condiciones</button>
                 
                 <button className="googleButton" onClick={loginGoogle}>Iniciar Sesión con Google</button> 
                 <button className="gitButton" onClick={loginGithub}>Iniciar Sesión con GitHub</button> 
