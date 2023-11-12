@@ -53,6 +53,16 @@ export const Show = () => {
                             <th>Acciones</th>
                         </tr>
                     </thead>
+
+                    <tbody>
+                        {products.map( (product) => (
+                            <tr key={product.id}>
+                                <td>{product.aula}</td>
+                                <td>{product.materia}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+
                 </table>
             </div>
         </div>
