@@ -18,6 +18,9 @@ import { Show } from './componentes/Show.js';
 import Edit from './componentes/Edit.js';
 import Create from './componentes/Create.js';
 
+//router}
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 const auth = getAuth(appFirebase);
 
 
@@ -38,8 +41,17 @@ function App() {
   return (
     <div>
       {usuario ? <Home correoUsuario = {usuario.email} /> : <Login/>}
-      <Show/>
+      
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Show/>}/>
+          <Route path='/create' element={<Create/>}/>
+          <Route path='/edit/:id' element={<Edit/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
+
+
   )
 }
 
