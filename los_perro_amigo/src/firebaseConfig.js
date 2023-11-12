@@ -13,7 +13,6 @@ const firebaseConfig = {
   measurementId: "G-HFX6HZEY91"
 };
 const appFirebase = initializeApp(firebaseConfig);
-
 // Obtén una instancia del módulo de autenticación
 //const auth = getAuth();
 export default appFirebase;
