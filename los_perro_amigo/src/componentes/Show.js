@@ -24,10 +24,12 @@ export const Show = () => {
         )
     }
 
-    
-
     //eliminar
-
+    const deleteProduct = async (id) => {
+        const productDoc = doc(db, "products", id)
+        await deleteDoc(productDoc)
+        getProducts()
+    }
     //confirmacion alert
 
     //useeffect
