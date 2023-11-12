@@ -18,14 +18,22 @@ export const Show = () => {
     //mostrar
     const getProducts = async () => {
         const data = await getDocs(productsCollection)
+
+        setProducts(
+            data.docs.map( (doc) => ( {...doc.data.id}))
+        )
     }
+
+    
 
     //eliminar
 
     //confirmacion alert
 
     //useeffect
-
+    useEffect( () => {
+        getProducts()
+    }, [])
 
     return (
     <div>Show</div>
