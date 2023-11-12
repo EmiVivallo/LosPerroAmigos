@@ -38,6 +38,24 @@ export const Show = () => {
     }, [])
 
     return (
-    <div>Show</div>
+    <div className='container'>
+        <div className='row'>
+            <div className='col'>
+                <div className='d-grid gap-2'>
+                    <link to="/create" className='btn btn-secondary mt-2 mb-2'>Create</link>
+                </div>
+
+                <table className='table table-dark table-hover'>
+                    <thead>
+                        <tr>
+                            <th>Aula</th>
+                            <th>Materia</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
   )
 }
