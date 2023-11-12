@@ -1,7 +1,6 @@
-//import { getAnalytics } from "firebase/analytics";
 
 import { initializeApp } from 'firebase/app';
-//import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC5bn_hytd-4dKrm5-aehbf6RrwgBuJHPI",
@@ -13,6 +12,6 @@ const firebaseConfig = {
   measurementId: "G-HFX6HZEY91"
 };
 const appFirebase = initializeApp(firebaseConfig);
-// Obtén una instancia del módulo de autenticación
-//const auth = getAuth();
+const db = getFirestore(app)
+
 export default appFirebase;
