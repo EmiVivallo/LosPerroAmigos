@@ -149,4 +149,14 @@ body {
   }
 }
 
-/*Terminos y condiciones*/
+ .form-container {animation: 1s ease 0s 1 normal forwards;} 
+
+ @keyframes form-container {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

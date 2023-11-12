@@ -11,6 +11,7 @@ import {getAuth, onAuthStateChanged} from "firebase/auth";
 //Componentes
 import Login from "./componentes/Login.js"
 import Home from "./componentes/Home.js";
+
 const auth = getAuth(appFirebase);
 
 
