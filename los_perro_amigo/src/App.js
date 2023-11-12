@@ -13,6 +13,11 @@ import Login from "./componentes/Login.js"
 import Home from "./componentes/Home.js";
 import "bootstrap/dist/css/bootstrap.min.css"
 
+//crud
+import { Show } from './componentes/Show.js';
+import Edit from './componentes/Edit.js';
+import Create from './componentes/Create.js';
+
 const auth = getAuth(appFirebase);
 
 
@@ -33,6 +38,7 @@ function App() {
   return (
     <div>
       {usuario ? <Home correoUsuario = {usuario.email} /> : <Login/>}
+      <Show/>
     </div>
   )
 }

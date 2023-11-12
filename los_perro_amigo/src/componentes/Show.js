@@ -59,6 +59,10 @@ export const Show = () => {
                             <tr key={product.id}>
                                 <td>{product.aula}</td>
                                 <td>{product.materia}</td>
+                                <td>
+                                    <link to={"/edit/${product.id"} className='btn btn-light'><i className="fa-solid fa-pencil"></i></link>
+                                    <button onClick={() => {deleteProduct(product.id)}} className='btn btn danger'><i className="fa-solid fa-trash" style="color: #b71a1a;"></i></button>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
