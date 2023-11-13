@@ -8,10 +8,8 @@ import Swal from 'sweetalert2'; // Importa sweetalert2 correctamente
 import withReactContent from "sweetalert2-react-content"
 import appFirebase from "../firebaseConfig";
 import { getAuth, signOut } from "firebase/auth";
+
 const MySwal = withReactContent(Swal)
-
-
-
 
 
 const auth = getAuth(appFirebase)
@@ -27,7 +25,8 @@ export const Show = ({correoUsuario}) => {
         const data = await getDocs(productsCollection)
 
         setProducts(
-            data.docs.map( (doc) => ( {...doc.data(),id:doc.id}))
+            data.docs.map( (doc) => ( {...doc.data(), id:doc.id}))
+            
         )
     }
 
@@ -46,7 +45,7 @@ export const Show = ({correoUsuario}) => {
 
     return (
     <div className='container'>
-                <h2 className="h22">Bienvenido usuario {correoUsuario} <button className="btn btn-primary" onClick={()=>signOut(auth)}> Cerrar Sesion</button> </h2>
+                <button className="btn btn-primary" onClick={()=>signOut(auth)}> Cerrar Sesion</button>
         <div className='row'>
             <div className='col'>
                 <div className='d-grid gap-2'>

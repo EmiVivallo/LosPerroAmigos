@@ -7,7 +7,6 @@ import appFirebase from "../src/firebaseConfig";
 import {getAuth, onAuthStateChanged} from "firebase/auth";
 //Componentes
 import Login from "./componentes/Login.js"
-import Home from "./componentes/Home.js";
 import "bootstrap/dist/css/bootstrap.min.css"
 
 //crud
