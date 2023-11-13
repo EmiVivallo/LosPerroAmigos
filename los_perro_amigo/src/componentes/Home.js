@@ -1,6 +1,7 @@
-import React from "react"
+/*import React from "react"
 import appFirebase from "../firebaseConfig";
 import { getAuth, signOut } from "firebase/auth";
+
 
 const auth = getAuth(appFirebase)
 const Home = ({correoUsuario}) => {
@@ -9,4 +10,4 @@ const Home = ({correoUsuario}) => {
     )
 }
 
-export default Home;
+export default Home;*/

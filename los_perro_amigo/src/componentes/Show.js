@@ -6,15 +6,22 @@ import {db} from "../firebaseConfig"
 
 import Swal from 'sweetalert2'; // Importa sweetalert2 correctamente
 import withReactContent from "sweetalert2-react-content"
+import appFirebase from "../firebaseConfig";
+import { getAuth, signOut } from "firebase/auth";
 const MySwal = withReactContent(Swal)
 
 
-export const Show = () => {
+
+
+
+const auth = getAuth(appFirebase)
+
+export const Show = ({correoUsuario}) => {
     //hooks
     const [products, setProducts] = useState( [ ] )
 
     //database
-    const productsCollection = collection(db, "products")
+    const productsCollection = collection(db, 'products')
     //mostrar
     const getProducts = async () => {
         const data = await getDocs(productsCollection)
@@ -26,7 +33,7 @@ export const Show = () => {
 
     //eliminar
     const deleteProduct = async (id) => {
-        const productDoc = doc(db, "products", id)
+        const productDoc = doc(db, 'products', id)
         await deleteDoc(productDoc)
         getProducts()
     }
@@ -39,6 +46,7 @@ export const Show = () => {
 
     return (
     <div className='container'>
+                <h2 className="h22">Bienvenido usuario {correoUsuario} <button className="btn btn-primary" onClick={()=>signOut(auth)}> Cerrar Sesion</button> </h2>
         <div className='row'>
             <div className='col'>
                 <div className='d-grid gap-2'>
@@ -48,8 +56,8 @@ export const Show = () => {
                 <table className='table table-dark table-hover'>
                     <thead>
                         <tr>
-                            <th>Aula</th>
-                            <th>Materia</th>
+                            <th>Aulas</th>
+                            <th>Materias</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -60,8 +68,8 @@ export const Show = () => {
                                 <td>{product.aula}</td>
                                 <td>{product.materia}</td>
                                 <td>
-                                    <Link to={"/edit/${product.id"} className='btn btn-light'><i className="fa-solid fa-pencil"></i></Link>
-                                    <button onClick={() => {deleteProduct(product.id)}} className='btn btn-danger'><i className="fa-solid fa-trash" style="color: #b71a1a;"></i></button>
+                                    <Link to={`/edit/${product.id}`} className='btn btn-light'><i className='fa-solid fa-pencil'></i></Link>
+                                    <button onClick={() => {deleteProduct(product.id)}} className='btn btn-danger'><i className='fa-solid fa-trash'></i></button>
                                 </td>
                             </tr>
                         ))}

@@ -37,11 +37,11 @@ function App() {
 
   return (
     <div>
-      {usuario ? <Home correoUsuario = {usuario.email} /> : <Login/>}
+      
       
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Show/>}/>
+          <Route path='/' element={usuario ? <Show correoUsuario = {usuario.email} /> : <Login/>}/>
           <Route path='/create' element={<Create/>}/>
           <Route path='/edit/:id' element={<Edit/>}/>
         </Routes>
