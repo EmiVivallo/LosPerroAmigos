@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 
 import { Link } from 'react-router-dom';
-import {collection, getDoc, getDocs, deleteDoc} from 'firebase/firestore'
+import {collection, getDoc, getDocs, deleteDoc, doc} from 'firebase/firestore'
 import {db} from "../firebaseConfig"
 
 import Swal from 'sweetalert2'; // Importa sweetalert2 correctamente
-import withReactContent from "sweetakert2-react-content"
+import withReactContent from "sweetalert2-react-content"
 const MySwal = withReactContent(Swal)
 
 
@@ -20,7 +20,7 @@ export const Show = () => {
         const data = await getDocs(productsCollection)
 
         setProducts(
-            data.docs.map( (doc) => ( {...doc.data.id}))
+            data.docs.map( (doc) => ( {...doc.data(),id:doc.id}))
         )
     }
 
