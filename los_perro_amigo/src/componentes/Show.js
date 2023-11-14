@@ -38,7 +38,28 @@ export const Show = () => {
         getProducts()
     }
     //confirmacion alert
+    const confirmDelete = (id) => {
+        MySwal.fire({
+            title: '¿Borrar la clase?',
+            text: 'No podras revertir los cambios',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: "Si, eliminar"
+        }) .then((result) => {
+            if (result.isConfirmed) {
+                deleteProduct(id)
+                Swal.fire(
+                    'Delete',
+                    'Clase eliminada',
+                    'success'
+                )
+            }
+            
+        })
 
+    }
     //useeffect
     useEffect( () => {
         getProducts();

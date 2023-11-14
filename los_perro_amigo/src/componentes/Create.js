@@ -21,7 +21,7 @@ const Create = () => {
     <div className='container'>
       <div className='row'>
         <div className='col'>
-          <h1>Crear Producto</h1>
+          <h1>Crear clase</h1>
 
             <form onSubmit={store}>
               <div className='mb-3'>
@@ -30,7 +30,7 @@ const Create = () => {
               </div>
 
               <div className='mb-3'>
-                <label className='form-label'>Aula</label>
+                <label className='form-label'>Materia</label>
                 <input value={materia} onChange={ (e)=> setMateria(e.target.value)} type='text' className='form-control' />
               </div>
 
