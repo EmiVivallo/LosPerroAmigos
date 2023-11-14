@@ -77,7 +77,11 @@ const Login = () => {
 
             const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^.&*])(?=.*[A-Z]).{8,}$/;
                 if (!passwordRegex.test(contraseña)) {
-                     alert("Asegúrese de que la contraseña cumpla con los requisitos:\n- Al menos 8 caracteres\n- Al menos un número\n- Al menos un símbolo (!@#$%^&*.)\n- Al menos una letra mayúscula");
+                  Swal.fire({
+                    icon: "error",
+                    title: "Ocurrio un error",
+                    text: "Asegúrese de que la contraseña cumpla con los requisitos:\n- Al menos 8 caracteres\n- Al menos un número\n- Al menos un símbolo (!@#$%^&*.)\n- Al menos una letra mayúscula"
+                  });
                      return; // Detener el proceso de registro
                   }
           
