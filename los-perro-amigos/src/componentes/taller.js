@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import '../CursosComponent.css';
+import '../TallerComponent.css';
 import { Link } from 'react-router-dom';
 
 function CursosComponent() {
   const horario = [
     { TurnoAula: 'Turno ', hs: 'Mañana' },
     { TurnoAula: 'Turno ', hs: 'Tarde' },
-    { TurnoAula: 'Turno ', hs: 'Vespertino' },
   ];
 
   const [horarioAmpliada, setHorarioAmpliada] = useState(null);
@@ -20,13 +19,13 @@ function CursosComponent() {
   };
 
   return (
-    <div className="HorarioComponent"> {}
-      <h2 className="HorarioComponent-title">Lista de Cursos y Turnos</h2> {}
-      <ul className="HorarioComponent-list"> {}
+    <div className="tallerComponent"> {}
+      <h2 className="tallerComponent-title">Lista de Talleres y Turnos</h2> {}
+      <ul className="tallerComponent-list"> {}
         {horario.map((Curso, Horario, hs) => (
-        <Link to="/aulas" className='link'>
+        <Link to="/talleres" className='link'>
           <li
-            className="HorarioComponent-item"
+            className="tallerComponent-item"
             onClick={() => handleHorarioClick(Horario)}
           >
               <strong>Cursada:</strong> {Curso.TurnoAula}, <strong>Horario:</strong> {Curso.hs}
@@ -38,8 +37,8 @@ function CursosComponent() {
       <button className='volverbtn'>Volver</button>
       </Link>    
       {horarioAmpliada && (
-        <div className="HorarioAmpliada">
-          <div className="HorarioAmpliada-content">
+        <div className="tallerAmpliada">
+          <div className="tallerAmpliada-content">
             <h2>{horarioAmpliada.nombreHorario}</h2>
             <p>Turno: {horarioAmpliada.hs}</p>
             <button onClick={handleCloseClick}>Cerrar</button>

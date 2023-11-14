@@ -1,0 +1,91 @@
+/* Estilos para el contenedor principal del componente AulasComponent */
+.talleresComponent {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to bottom, #3498db, #2980b9); /* Fondo degradado azul */
+    border: 2px solid #2980b9; /* Borde del teléfono (azul más oscuro) */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    width: 375px; 
+    height: 612px; 
+    position: relative; /* Permite el posicionamiento de elementos internos */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra */
+    overflow: hidden; /* Oculta el contenido que desborde */
+    cursor: pointer; /* Cambia el cursor al hacer clic */
+    transition: transform 0.3s, width 0.3s, height 0.3s, top 0.3s, left 0.3s; /* Agrega transiciones suaves */
+    z-index: 1; /* Asegura que el componente esté por encima de otros elementos */
+  }
+  
+  /* Estilos para el título */
+  .talleresComponent h2 {
+    text-align: center;
+    font-size: 1.5rem; /* Tamaño del texto del título */
+    margin-bottom: 10px; /* Espaciado inferior */
+    color: #fff; /* Color del texto (blanco) */
+  }
+  
+  /* Estilos para la lista de aulas y materias */
+  .talleresComponent ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el espaciado predeterminado de la lista */
+    margin-top: 50px; /* Espaciado superior para dejar espacio para la parte superior del teléfono */
+  }
+  
+  .talleresComponent li {
+    margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+    background-color: #ecf0f1; /* Color de fondo de cada elemento (gris claro) */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #bdc3c7; /* Borde (gris más claro) */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.2s; /* Transición para efecto de elevación */
+  }
+  
+  /* Efecto de elevación al pasar el mouse sobre un elemento de la lista */
+  .talleresComponent li:hover {
+    transform: translateY(-2px); /* Elevación sutil */
+    background-color: #d5e7f4; /* Cambia el color de fondo al pasar el mouse (azul claro) */
+  }
+  .custom-button {
+    background-color: #e74c3c; 
+    color: white; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto; 
+  }
+
+  @media only screen and (max-width: 600px) {
+    .volverbtn {
+        width: 100%; /* Ajustar el ancho del botón de volver al 100% en pantallas más pequeñas */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .talleresComponent {
+        width: 90%; /* Ajustar el ancho para pantallas más pequeñas */
+        height: auto; /* Permitir que la altura se ajuste automáticamente en pantallas más pequeñas */
+    }
+}
+  
+  .link{
+    text-decoration: none;
+  }
+  .volverbtn{
+      
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    height: 30px;
+    width: 125px;
+    margin-top: 20px;
+  }
+  
+  .volverbtn:hover{
+    transform: scale(1.1);
+    transition: 0.1s;
+  }
+  
+  

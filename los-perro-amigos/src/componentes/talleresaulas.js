@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import '../TalleresComponent.css';
 import { Link } from 'react-router-dom';
 
 function AulasComponent() {
   // Definimos un array de objetos que representan las aulas y las materias
   const aulas = [
-    { nombreAula: '6to 3ra', materia: 'Tecnologia de Redes II' },
-    { nombreAula: '5to 2da', materia: 'Tecnologia de Redes I' },
-    { nombreAula: '4to 3ra', materia: 'Fisica' },
-    { nombreAula: '6to 1ra', materia: 'Inglés' },
-    { nombreAula: '5to 1ra', materia: 'Programacion Web Estatica' },
+    { nombreAula: 'G603', materia: 'Progrmacion Web dinamica' },
+    { nombreAula: 'G506', materia: 'Sistemas Operativos' },
+    { nombreAula: 'G605', materia: 'Construccion de software' },
+    { nombreAula: 'G509', materia: 'Programacion web estatica' },
+    { nombreAula: 'G604', materia: 'Redes II' },
   ];
 
   // Estado para controlar la aula ampliada

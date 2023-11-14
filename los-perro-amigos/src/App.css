@@ -1,12 +1,14 @@
 /* Estilos para el contenedor principal del componente AulasComponent */
 .AulasComponent {
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
   background: linear-gradient(to bottom, #3498db, #2980b9); /* Fondo degradado azul */
   border: 2px solid #2980b9; /* Borde del teléfono (azul más oscuro) */
   border-radius: 10px; /* Bordes redondeados */
   padding: 20px; /* Espaciado interno */
-  width: 375px; /* Ancho del teléfono (ancho del Samsung Galaxy S10) */
-  height: 812px; /* Altura del teléfono (alto del Samsung Galaxy S10) */
-  margin: 0 auto; /* Centrar en la pantalla */
+  width: 375px; 
+  height: 612px; 
   position: relative; /* Permite el posicionamiento de elementos internos */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra */
   overflow: hidden; /* Oculta el contenido que desborde */
@@ -17,6 +19,7 @@
 
 /* Estilos para el título */
 .AulasComponent h2 {
+  text-align: center;
   font-size: 1.5rem; /* Tamaño del texto del título */
   margin-bottom: 10px; /* Espaciado inferior */
   color: #fff; /* Color del texto (blanco) */
@@ -56,4 +59,43 @@
 
 .link{
   text-decoration: none;
+}
+.volverbtn{
+    
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height: 30px;
+  width: 125px;
+  margin-top: 20px;
+}
+
+.volverbtn:hover{
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+
+
+@media only screen and (min-width: 601px) {
+  /* Estilos específicos para pantallas más grandes que 600px de ancho */
+  .volverbtn {
+      width: 60%; /* Ajustar el ancho en pantallas más grandes */
+      max-width: 200px; /* Establecer un ancho máximo */
+  }
+}
+
+/* Estilos adicionales para hacer más responsive otros elementos si es necesario */
+@media only screen and (max-width: 600px) {
+  .HorarioComponent {
+      width: 90%;
+      height: auto;
+  }
+
+  .HorarioComponent ul {
+      margin-top: 3vh; /* Ajustado el margen superior en pantallas más pequeñas */
+  }
+
+  .HorarioComponent li {
+    margin-bottom: 5px; /* Ajustado el espaciado entre elementos en pantallas más pequeñas */
+}
 }
