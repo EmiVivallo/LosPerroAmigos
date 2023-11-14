@@ -14,11 +14,17 @@ const Create = () => {
   const store = async (e) => {
     e.preventDefault()
     await addDoc( productsCollection, { aula:aula, materia: materia})
-    
+    navigate('/')
   }
 
   return (
-    <div>Create</div>
+    <div className='container'>
+      <div className='row'>
+        <div className='col'>
+          <h1>Crear Producto</h1>
+        </div>
+      </div>
+    </div>
   )
 }
 
