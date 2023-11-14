@@ -44,6 +44,7 @@ function Home() {
   }, [isCameraActive]);
 
   return (
+    <div className='main-container'>
     <div className="TTComponent">
       <h2 className="TTComponent-title">BIENVENID@</h2>
       <div className='cam'>
@@ -62,6 +63,7 @@ function Home() {
           <button className='btn-item'> Teoria </button>
         </Link>
         <button className="btn btn-danger" onClick={()=>signOut(auth)}>Cerrar Sesion</button>
+    </div>
     </div>
   );
 }

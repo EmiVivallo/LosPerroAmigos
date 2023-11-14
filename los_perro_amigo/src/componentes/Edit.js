@@ -39,6 +39,7 @@ const Edit = () => {
   }, [ ])
 
   return (
+    <div className='main-container'>
     <div className='container'>
       <div className='row'>
         <div className='col'>
@@ -61,6 +62,7 @@ const Edit = () => {
             </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

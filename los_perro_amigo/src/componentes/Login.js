@@ -112,6 +112,7 @@ const Login = () => {
         
 
     return (
+      <div className='main-container'>
         <div className="form-container">
             
                 <form onSubmit={functAutenticacion}>
@@ -134,6 +135,7 @@ const Login = () => {
                 
                 <button className="googleButton" onClick={loginGoogle}>Iniciar Sesión con Google</button> 
                 <button className="gitButton" onClick={loginGithub}>Iniciar Sesión con GitHub</button> 
+        </div>
         </div>
     )
 }
