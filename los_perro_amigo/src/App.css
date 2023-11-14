@@ -365,3 +365,14 @@ height: auto;
   color: white;
   text-align: center;
 }
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .container-show,
+  .contenedor-edit,
+  .TTComponent,
+  .form-container,
+  .contenedor-create {
+    min-width: 90%;
+  }
+}
