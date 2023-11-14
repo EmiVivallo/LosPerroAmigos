@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { getDoc, updateDoc, doc } from 'firebase/firestore'
 import { db } from '../firebaseConfig'
-import Swal from 'sweetalert2'; // Importa sweetalert2 correctamente
+import Swal from 'sweetalert2';
 
 
 const Edit = () => {

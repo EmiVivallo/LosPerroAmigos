@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { collection, getDoc, getDocs, deleteDoc, doc } from 'firebase/firestore'
 import { db } from "../firebaseConfig"
 
-import Swal from 'sweetalert2'; // Importa sweetalert2 correctamente
+import Swal from 'sweetalert2';
 import withReactContent from "sweetalert2-react-content"
 import { appFirebase } from "../firebaseConfig";
 import { getAuth, signOut } from "firebase/auth";

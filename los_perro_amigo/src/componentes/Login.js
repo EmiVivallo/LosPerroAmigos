@@ -4,6 +4,7 @@ import { appFirebase } from "../firebaseConfig"
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { GithubAuthProvider } from "firebase/auth"
+import Swal from 'sweetalert2';
 
 const providerGoogle = new GoogleAuthProvider();
 const providerGithub = new GithubAuthProvider();
@@ -15,45 +16,44 @@ const Login = () => {
     function loginGithub() {
         signInWithPopup(auth, providerGithub)
         .then((result) => {
-        // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+        
         const credential = GithubAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
 
-        // The signed-in user info.
+        
         const user = result.user;
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
+        
+        
         }).catch((error) => {
-            // Handle Errors here.
+            
             const errorCode = error.code;
             const errorMessage = error.message;
-            // The email of the user's account used.
+            
             const email = error.customData.email;
-            // The AuthCredential type that was used.
+            
             const credential = GithubAuthProvider.credentialFromError(error);
-            // ...
+            
         });
     }
 
     function loginGoogle() {
             signInWithPopup(auth, providerGoogle)
         .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
+        
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
-        // The signed-in user info.
+        
         const user = result.user;
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
+        
         }).catch((error) => {
-            //     Handle Errors here.
+            
             const errorCode = error.code;
             const errorMessage = error.message;
-            // The email of the user's account used.
+            
             const email = error.customData.email;
-            // The AuthCredential type that was used.
+            
             const credential = GoogleAuthProvider.credentialFromError(error);
-            // ...
+            
         });
     }
 
@@ -67,7 +67,11 @@ const Login = () => {
         if (registrando) {
             const correoRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
                 if (!correoRegex.test(correo)) {
-                    alert("El correo electrónico no es válido. Por favor, ingrese un correo válido.");
+                  Swal.fire({
+                    icon: "error",
+                    title: "Ocurrio un error",
+                    text: "El correo electrónico no es válido. Por favor, ingrese un correo válido."
+                  });
                     return; // Detener el proceso de registro
                 }
 
