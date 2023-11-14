@@ -12,7 +12,11 @@ const Edit = () => {
   const {id} = useParams()
 
   const update = async (e) => {
-
+    e.preventDefault()
+    const product = doc(db, "products", id)
+    const data = {aula:aula, materia:materia}
+    await updateDoc(product, data)
+    navigate('/')
   }
 
   const getProductById = async (id) => {
