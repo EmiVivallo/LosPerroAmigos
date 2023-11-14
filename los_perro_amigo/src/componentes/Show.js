@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react'
 
 import { Link } from 'react-router-dom';
-import {collection, getDoc, getDocs, deleteDoc, doc} from 'firebase/firestore'
-import {db} from "../firebaseConfig"
+import { collection, getDoc, getDocs, deleteDoc, doc } from 'firebase/firestore'
+import { db } from "../firebaseConfig"
 
 import Swal from 'sweetalert2'; // Importa sweetalert2 correctamente
 import withReactContent from "sweetalert2-react-content"
-import appFirebase from "../firebaseConfig";
+import { appFirebase } from "../firebaseConfig";
 import { getAuth, signOut } from "firebase/auth";
 
 const MySwal = withReactContent(Swal)
@@ -14,12 +14,13 @@ const MySwal = withReactContent(Swal)
 
 const auth = getAuth(appFirebase)
 
-export const Show = ({correoUsuario}) => {
+export const Show = () => {
     //hooks
-    const [products, setProducts] = useState( [ ] )
+    const [products, setProducts] = useState( [] )
 
     //database
-    const productsCollection = collection(db, 'products')
+    const productsCollection = collection(db, "products")
+
     //mostrar
     const getProducts = async () => {
         const data = await getDocs(productsCollection)
@@ -40,12 +41,12 @@ export const Show = ({correoUsuario}) => {
 
     //useeffect
     useEffect( () => {
-        getProducts()
-    }, [])
+        getProducts();
+    }, [ ]);
 
     return (
     <div className='container'>
-                <button className="btn btn-primary" onClick={()=>signOut(auth)}> Cerrar Sesion</button>
+                <button className="btn btn-primary" onClick={()=>signOut(auth)}>Cerrar Sesion</button>
         <div className='row'>
             <div className='col'>
                 <div className='d-grid gap-2'>

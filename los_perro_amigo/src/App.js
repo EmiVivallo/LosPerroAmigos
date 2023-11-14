@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import "./App.css";
 
 //Modulos de firebase
-import appFirebase from "../src/firebaseConfig";
+import { appFirebase } from "../src/firebaseConfig";
 import {getAuth, onAuthStateChanged} from "firebase/auth";
 //Componentes
 import Login from "./componentes/Login.js"
