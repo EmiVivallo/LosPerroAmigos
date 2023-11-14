@@ -20,7 +20,16 @@ const Edit = () => {
   }
 
   const getProductById = async (id) => {
-
+    const product = await getDoc(doc(db, "products", id))
+    if (product.exists()) {
+      
+    }else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "La clase no existe"
+      });
+    }
   }
 
   useEffect( () => {
