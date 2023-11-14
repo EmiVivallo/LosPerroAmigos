@@ -89,7 +89,11 @@ const Login = () => {
               await createUserWithEmailAndPassword(auth, correo, contraseña);
               // Registro exitoso
             } catch (error) {
-              alert("Ocurrió un error durante el registro. Intente de nuevo");
+              Swal.fire({
+                icon: "error",
+                title: "Ocurrio un error",
+                text: "Ocurrió un error durante el registro. Intente de nuevo"
+              });
             }
           } else {
             try {
