@@ -21,7 +21,8 @@ const Create = () => {
     <div className='container'>
       <div className='row'>
         <div className='col'>
-          <h1>Crear clase</h1>
+          <div className='contenedor-create'>
+          <h1 className='tit-create'>Crear clase</h1>
 
             <form onSubmit={store}>
               <div className='mb-3'>
@@ -33,9 +34,10 @@ const Create = () => {
                 <label className='form-label'>Materia</label>
                 <input value={materia} onChange={ (e)=> setMateria(e.target.value)} type='text' className='form-control' />
               </div>
-
-              <button type='submit' className='btn btn-primary'>Crear</button>
+              <div className='tit-edit'>
+              <button type='submit' className='btn btn-primary'>Crear</button></div>
             </form>
+            </div>
         </div>
       </div>
     </div>

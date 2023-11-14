@@ -45,7 +45,7 @@ function Home() {
 
   return (
     <div className="TTComponent">
-      <h2 className="TTComponent-title">¿Qué desea visualizar?</h2>
+      <h2 className="TTComponent-title">BIENVENID@</h2>
       <div className='cam'>
         <div
           className={`camera ${isCameraActive ? 'active' : ''}`}
@@ -58,13 +58,10 @@ function Home() {
         </button>
         {error && <div className="error-message">{error}</div>} {/* Mostrar mensaje de error */}
       </div>
-      |
-      <div className='divbotones'>
-        <Link to="/show" className='link'>
+        <Link to="/show">
           <button className='btn-item'> Teoria </button>
         </Link>
-        <button className="btn btn-primary" onClick={()=>signOut(auth)}>Cerrar Sesion</button>
-      </div>
+        <button className="btn btn-danger" onClick={()=>signOut(auth)}>Cerrar Sesion</button>
     </div>
   );
 }

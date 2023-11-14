@@ -116,7 +116,6 @@ const Login = () => {
             
                 <form onSubmit={functAutenticacion}>
                   <div className="titf">
-                  <h2>{registrando ? " " : "Bienvenido de nuevo"}</h2>
                   <h2>{registrando ? "Registrate" : "Inicia Sesion"}</h2>
                   </div>
                   <label className="form-label">

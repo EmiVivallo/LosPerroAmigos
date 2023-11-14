@@ -12,21 +12,28 @@
   color: rgb(255, 255, 255);
 }
 
+
 body {
-  background: linear-gradient(to bottom, #000033, #000000); /* Fondo con degradado de azul oscuro a negro */
-  margin: 110px; /* Añade esto para eliminar el margen predeterminado del body */
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Esto asegura que el contenedor esté centrado verticalmente en la página */
+    background-image: url('../src/img/descarga.png'); /* Cambia 'ruta_de_tu_imagen.jpg' por la ruta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center;    margin: 0; /* Elimina el margen predeterminado del cuerpo para que el contenedor se centre completamente */
+  }
+
 
 /* Estilos para el formulario */
 .form-container {
   align-items: center;
-  max-width: 35%;
   color: white;
   margin: 0 auto;
   padding: 10px;
   border-radius: 5px;
-  background: rgba(10, 10, 78, 0.226); /* Fondo blanco para el contenedor */
+  background: rgba(10, 10, 78, 0.945); /* Fondo blanco para el contenedor */
   box-shadow: 0 0 20px rgb(255, 255, 255); /* Sombra para el contenedor */
+  min-width: 300px;
 }
 .titf {
   text-align: center;
@@ -38,6 +45,7 @@ body {
   display: block;
   margin-bottom: 5px;
   color: white;
+  width: 100%;
 }
 
 .form-input {
@@ -45,6 +53,7 @@ body {
   padding: 8px;
   margin-bottom: 10px;
   border-radius: 30px;
+  width: 100%;
 }
 
 /* Estilos para el botón de registro */
@@ -56,6 +65,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0 0 5px rgb(255, 255, 255); /* Sombra para el contenedor */
+  width: 100%;
 }
 
 .form-button:hover {
@@ -75,6 +85,7 @@ body {
   cursor: pointer;
   border: none;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
 }   
 
 /* Estilos para el home */
@@ -99,6 +110,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 100%;
 }
 
 .googleButton:hover {
@@ -128,6 +140,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
   margin-top: 4px;
+  width: 100%;
 }
 
 .gitButton:hover {
@@ -164,21 +177,17 @@ body {
 /*home*/
 .TTComponent {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  background: linear-gradient(to bottom, #3498db, #2980b9); 
-  border: 2px solid #2980b9; 
+  background: rgba(10, 10, 78, 0.945); /* Fondo blanco para el contenedor */ 
+  border: 2px solid rgb(16, 23, 87); 
   border-radius: 10px; 
-  padding: 20px; 
   width: 375px; 
-  height: 450px; 
-  position: relative; 
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
   overflow: hidden; 
   cursor: pointer; 
   transition: transform 0.3s, width 0.3s, height 0.3s, top 0.3s, left 0.3s; 
   z-index: 1; 
+  display: grid;
+
 }
 
 .TTComponent h2 {
@@ -201,11 +210,12 @@ margin-top: 20px;
 
 .btn-item {
 margin-bottom: 10px;
-background-color: #3498db;
+margin-top: 8px;
+background-color: #1373b3;
 padding: 15px;
 border: none;
 height: 60px;
-width: 120px;
+width: 200px;
 border-radius: 25px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 transition: transform 0.2s, background-color 0.2s;
@@ -318,4 +328,40 @@ height: auto;
   width: 90%; 
   height: auto; 
 }
+}
+
+/*Show*/
+
+.container-show {
+  background: rgba(10, 10, 78, 0.945);
+  min-width: 600px;
+  border-radius: 10px;
+}
+
+/*edit*/
+
+.contenedor-edit {
+  background: rgba(10, 10, 78, 0.945);
+  min-width: 600px;
+  border-radius: 10px;
+  
+}
+
+.tit-edit {
+  color: white;
+  text-align: center;
+}
+
+/*create*/
+
+.contenedor-create {
+  background: rgba(10, 10, 78, 0.945);
+  min-width: 600px;
+  border-radius: 10px;
+  
+}
+
+.tit-create {
+  color: white;
+  text-align: center;
 }

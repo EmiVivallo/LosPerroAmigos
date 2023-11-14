@@ -63,13 +63,13 @@ export const Show = () => {
     }, [ ]);
 
     return (
-    <div className='container'>
+    <div className='container-show'>
                 
         <div className='row'>
             <div className='col'>
                 <div className='d-grid gap-2'>
-                    <Link to="/" className='btn btn-info mt-1 mb-2'>Home</Link>
-                    <Link to="/create" className='btn btn-secondary mb-2'>Create</Link>
+                    <Link to="/" className='btn btn-info'>Home</Link>
+                    <Link to="/create" className='btn btn-secondary mb-1'>Create</Link>
                 </div>
 
                 <table className='table table-dark table-hover'>
@@ -95,6 +95,7 @@ export const Show = () => {
                     </tbody>
 
                 </table>
+                
             </div>
         </div>
     </div>
