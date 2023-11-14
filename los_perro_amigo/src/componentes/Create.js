@@ -11,6 +11,12 @@ const Create = () => {
 
   const productsCollection = collection(db, "products")
 
+  const store = async (e) => {
+    e.preventDefault()
+    await addDoc( productsCollection, { aula:aula, materia: materia})
+    
+  }
+
   return (
     <div>Create</div>
   )
