@@ -100,7 +100,11 @@ const Login = () => {
               await signInWithEmailAndPassword(auth, correo, contraseña);
               // Inicio de sesión exitoso
             } catch (error) {
-              alert("El correo o la contraseña son incorrectos.");
+              Swal.fire({
+                icon: "error",
+                title: "Ocurrio un error",
+                text: "El correo o la contraseña son incorrectos."
+              });
             }
           }
         }
