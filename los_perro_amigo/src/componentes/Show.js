@@ -51,7 +51,7 @@ export const Show = () => {
             if (result.isConfirmed) {
                 deleteProduct(id)
                 Swal.fire(
-                    'Delete',
+                    'Eliminada',
                     'Clase eliminada',
                     'success'
                 )
@@ -90,7 +90,7 @@ export const Show = () => {
                                 <td>{product.materia}</td>
                                 <td>
                                     <Link to={`/edit/${product.id}`} className='btn btn-light'><i className='fa-solid fa-pencil'></i></Link>
-                                    <button onClick={() => {deleteProduct(product.id)}} className='btn btn-danger'><i className='fa-solid fa-trash'></i></button>
+                                    <button onClick={() => {confirmDelete(product.id)}} className='btn btn-danger'><i className='fa-solid fa-trash'></i></button>
                                 </td>
                             </tr>
                         ))}
