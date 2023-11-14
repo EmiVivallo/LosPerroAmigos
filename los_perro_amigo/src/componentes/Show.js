@@ -6,13 +6,10 @@ import { db } from "../firebaseConfig"
 
 import Swal from 'sweetalert2';
 import withReactContent from "sweetalert2-react-content"
-import { appFirebase } from "../firebaseConfig";
-import { getAuth, signOut } from "firebase/auth";
 
 const MySwal = withReactContent(Swal)
 
 
-const auth = getAuth(appFirebase)
 
 export const Show = () => {
     //hooks
@@ -67,11 +64,12 @@ export const Show = () => {
 
     return (
     <div className='container'>
-                <button className="btn btn-primary" onClick={()=>signOut(auth)}>Cerrar Sesion</button>
+                
         <div className='row'>
             <div className='col'>
                 <div className='d-grid gap-2'>
-                    <Link to="/create" className='btn btn-secondary mt-2 mb-2'>Create</Link>
+                    <Link to="/" className='btn btn-info mt-1 mb-2'>Home</Link>
+                    <Link to="/create" className='btn btn-secondary mb-2'>Create</Link>
                 </div>
 
                 <table className='table table-dark table-hover'>
@@ -99,7 +97,6 @@ export const Show = () => {
                 </table>
             </div>
         </div>
-        <h1>gola</h1>
     </div>
   )
 }

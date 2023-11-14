@@ -1,54 +1,42 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import "./App.css";
-
-//Modulos de firebase
 import { appFirebase } from "../src/firebaseConfig";
-import {getAuth, onAuthStateChanged} from "firebase/auth";
-//Componentes
-import Login from "./componentes/Login.js"
-import "bootstrap/dist/css/bootstrap.min.css"
-
-//crud
-import { Show } from './componentes/Show.js';
-import Edit from './componentes/Edit.js';
-import Create from './componentes/Create.js';
-
-//router}
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from "./componentes/Login.js";
+import Home from './componentes/Home.js';
+import Create from './componentes/Create.js';
+import Edit from './componentes/Edit.js';
+import {Show} from './componentes/Show.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const auth = getAuth(appFirebase);
 
-
-
 function App() {
+  const [usuario, setUsuario] = useState(null);
 
-  const [usuario, setUsuario] = useState (null)
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (usuarioFirebase) => {
+      setUsuario(usuarioFirebase);
+    });
 
-  onAuthStateChanged(auth, (usuarioFirebase)=>{
-    if (usuarioFirebase) {
-      setUsuario(usuarioFirebase)
-    }
-    else {
-      setUsuario(null)
-    }
-  })
+    return () => unsubscribe();
+  }, []);
 
   return (
     <div>
       
-      
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={usuario ? <Show correoUsuario = {usuario.email} /> : <Login/>}/>
-          <Route path='/create' element={<Create/>}/>
-          <Route path='/edit/:id' element={<Edit/>}/>
+          <Route path='/' element={usuario ? <Home correoUsuario={usuario.email} /> : <Login />} />
+          <Route path='/show' element={<Show />} />
+          <Route path='/create' element={<Create />} />
+          <Route path='/edit/:id' element={<Edit />} />
         </Routes>
       </BrowserRouter>
     </div>
-
-
-  )
+  );
 }
 
 export default App;

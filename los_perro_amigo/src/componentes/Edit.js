@@ -17,7 +17,7 @@ const Edit = () => {
     const product = doc(db, "products", id)
     const data = {aula:aula, materia:materia}
     await updateDoc(product, data)
-    navigate('/')
+    navigate('/show')
   }
 
   const getProductById = async (id) => {
