@@ -9,6 +9,8 @@ const Create = () => {
   const [ materia, setMateria ] = useState('')
   const navigate = useNavigate()
 
+  const productsCollection = collection(db, "products")
+
   return (
     <div>Create</div>
   )
