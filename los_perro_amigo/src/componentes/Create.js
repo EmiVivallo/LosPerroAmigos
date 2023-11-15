@@ -24,7 +24,6 @@ const Create = () => {
         <div className='col'>
           <div className='contenedor-create'>
           <h1 className='tit-create'>Crear clase</h1>
-
             <form onSubmit={store}>
               <div className='mb-3'>
                 <label className='form-label'>Aula</label>

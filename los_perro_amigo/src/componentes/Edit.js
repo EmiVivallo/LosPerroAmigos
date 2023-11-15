@@ -45,7 +45,6 @@ const Edit = () => {
         <div className='col'>
           <div className='contenedor-edit'>
           <h1 className='tit-edit'>Editar clase</h1>
-
             <form onSubmit={update}>
               <div className='mb-3'>
                 <label className='form-label'>Aula</label>
