@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import { getAuth, signOut } from "firebase/auth";
 import { appFirebase } from "../firebaseConfig";
+import { FaExclamationTriangle } from 'react-icons/fa'; // Importa el ícono de advertencia
 
 function Home() {
   const videoRef = useRef(null);
   const [isCameraActive, setCameraActive] = useState(false);
   const [error, setError] = useState(null);
-  const [isTheoryButtonDisabled, setTheoryButtonDisabled] = useState(true); // Nuevo estado para el botón de teoría
+  const [isTheoryButtonDisabled, setTheoryButtonDisabled] = useState(true);
   const auth = getAuth(appFirebase);
 
   const startCamera = async () => {
@@ -17,24 +18,23 @@ function Home() {
 
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
-        setTheoryButtonDisabled(false); // Habilitar el botón de teoría cuando la cámara se activa
+        setCameraActive(true);
+        setTheoryButtonDisabled(false);
       }
     } catch (error) {
       console.error('Error accessing camera:', error);
       setError('Error accessing camera. Please check camera permissions.');
+      setCameraActive(false);
     }
   };
 
   const toggleCamera = () => {
     setCameraActive(!isCameraActive);
     setError(null);
-
-    // Deshabilitar el botón de teoría al desactivar la cámara
     setTheoryButtonDisabled(isCameraActive);
   };
 
   useEffect(() => {
-    // Desactivar la cámara al salir de la página
     return () => {
       if (isCameraActive && videoRef.current) {
         const stream = videoRef.current.srcObject;
@@ -50,6 +50,13 @@ function Home() {
     <div className='main-container'>
       <div className="TTComponent">
         <h2 className="TTComponent-title">BIENVENID@</h2>
+        {isCameraActive ? null : (
+          <h3 className="tit-h3">
+            <FaExclamationTriangle className="icon-warning" />
+            Prenda la cámara para continuar
+            <FaExclamationTriangle className="icon-warning" />
+          </h3>
+        )}
         <div className='cam'>
           <div
             className={`camera ${isCameraActive ? 'active' : ''}`}

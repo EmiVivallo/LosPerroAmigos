@@ -79,8 +79,8 @@ export const Show = () => {
         <div className='row'>
           <div className='col'>
             <div className='d-grid gap-2'>
-              <Link to="/" className='btn btn-info'>Home</Link>
-              <Link to="/create" className='btn btn-secondary mb-1'>Create</Link>
+              <Link to="/" className='btn btn-info'>Inicio</Link>
+              <Link to="/create" className='btn btn-secondary mb-1'>Crear</Link>
             </div>
 
             <table className='table table-dark table-hover'>

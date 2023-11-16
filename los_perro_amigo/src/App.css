@@ -377,3 +377,9 @@ height: auto;
     min-width: 90%;
   }
 }
+
+.tit-h3 {
+  color:white;
+  font-size: medium;
+  font-family: 'Times New Roman', Times, serif;
+}
