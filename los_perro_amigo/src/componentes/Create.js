@@ -35,7 +35,7 @@ const Create = () => {
                 <input value={materia} onChange={ (e)=> setMateria(e.target.value)} type='text' className='form-control' />
               </div>
               <div className='tit-edit'>
-              <button type='submit' className='btn btn-primary'>Crear</button></div>
+              <button type='submit' className='btn btn-primary  btn-lg'>Crear</button></div>
             </form>
             </div>
         </div>
