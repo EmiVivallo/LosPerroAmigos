@@ -4,13 +4,12 @@ import '../App.css';
 import { getAuth, signOut } from "firebase/auth";
 import { appFirebase } from "../firebaseConfig";
 
-
-
 function Home() {
   const videoRef = useRef(null);
   const [isCameraActive, setCameraActive] = useState(false);
-  const [error, setError] = useState(null); // Nuevo estado para manejar errores
-  const auth = getAuth(appFirebase)
+  const [error, setError] = useState(null);
+  const [isTheoryButtonDisabled, setTheoryButtonDisabled] = useState(true); // Nuevo estado para el botón de teoría
+  const auth = getAuth(appFirebase);
 
   const startCamera = async () => {
     try {
@@ -18,6 +17,7 @@ function Home() {
 
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
+        setTheoryButtonDisabled(false); // Habilitar el botón de teoría cuando la cámara se activa
       }
     } catch (error) {
       console.error('Error accessing camera:', error);
@@ -27,7 +27,10 @@ function Home() {
 
   const toggleCamera = () => {
     setCameraActive(!isCameraActive);
-    setError(null); // Limpiar cualquier mensaje de error al cambiar el estado de la cámara
+    setError(null);
+
+    // Deshabilitar el botón de teoría al desactivar la cámara
+    setTheoryButtonDisabled(isCameraActive);
   };
 
   useEffect(() => {
@@ -45,25 +48,33 @@ function Home() {
 
   return (
     <div className='main-container'>
-    <div className="TTComponent">
-      <h2 className="TTComponent-title">BIENVENID@</h2>
-      <div className='cam'>
-        <div
-          className={`camera ${isCameraActive ? 'active' : ''}`}
-          onClick={toggleCamera}
-        >
-          <video className='camara' ref={videoRef} autoPlay playsInline />
+      <div className="TTComponent">
+        <h2 className="TTComponent-title">BIENVENID@</h2>
+        <div className='cam'>
+          <div
+            className={`camera ${isCameraActive ? 'active' : ''}`}
+            onClick={toggleCamera}
+          >
+            <video className='camara' ref={videoRef} autoPlay playsInline />
+          </div>
+          <button className={"btncam"} onClick={startCamera}>
+            Activar cámara
+          </button>
+          {error && <div className="error-message">{error}</div>}
         </div>
-        <button className={"btncam"} onClick={startCamera}>
-          Activar cámara
-        </button>
-        {error && <div className="error-message">{error}</div>} {/* Mostrar mensaje de error */}
-      </div>
         <Link to="/show">
-          <button className='btn-item'> Teoria </button>
+          <button
+            className='btn-item'
+            disabled={isTheoryButtonDisabled}
+            style={{ opacity: isTheoryButtonDisabled ? 0.5 : 1 }}
+          >
+            Teoria
+          </button>
         </Link>
-        <button className="btn btn-danger" onClick={()=>signOut(auth)}>Cerrar Sesion</button>
-    </div>
+        <button className="btn btn-danger" onClick={() => signOut(auth)}>
+          Cerrar Sesion
+        </button>
+      </div>
     </div>
   );
 }
