@@ -1,20 +1,29 @@
-import React, { useState } from "react"
 
-import { appFirebase } from "../firebaseConfig"
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { GithubAuthProvider } from "firebase/auth"
+
+// Login.js
+import React, { useState } from "react";
+import { appFirebase } from "../firebaseConfig";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 import Swal from 'sweetalert2';
 
 const providerGoogle = new GoogleAuthProvider();
 const providerGithub = new GithubAuthProvider();
 
-const auth = getAuth(appFirebase)
+const auth = getAuth(appFirebase);
 
 const Login = () => {
+  const [registrando, setRegistrando] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [passwordInputType, setPasswordInputType] = useState("password");
 
-    function loginGithub() {
-        signInWithPopup(auth, providerGithub)
+  function togglePasswordVisibility() {
+    setShowPassword(!showPassword);
+    setPasswordInputType(showPassword ? "password" : "text");
+  }
+
+  function loginGithub() {
+    signInWithPopup(auth, providerGithub)
         .then((result) => {
         
         const credential = GithubAuthProvider.credentialFromResult(result);
@@ -34,10 +43,10 @@ const Login = () => {
             const credential = GithubAuthProvider.credentialFromError(error);
             
         });
-    }
+  }
 
-    function loginGoogle() {
-            signInWithPopup(auth, providerGoogle)
+  function loginGoogle() {
+    signInWithPopup(auth, providerGoogle)
         .then((result) => {
         
         const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -55,12 +64,10 @@ const Login = () => {
             const credential = GoogleAuthProvider.credentialFromError(error);
             
         });
-    }
+  }
 
-    const [registrando, setRegistrando] = useState(false)
-
-    const functAutenticacion = async(e) => {
-        e.preventDefault();
+  const functAutenticacion = async (e) => {
+    e.preventDefault();
         const correo = e.target.email.value;
         const contraseña = e.target.password.value;
 
@@ -88,6 +95,11 @@ const Login = () => {
             try {
               await createUserWithEmailAndPassword(auth, correo, contraseña);
               // Registro exitoso
+              Swal.fire({
+                icon: "success", // Cambiado a icono de éxito
+                title: "¡Registro exitoso!",
+                text: "Tu cuenta ha sido registrada correctamente."
+              });              
             } catch (error) {
               Swal.fire({
                 icon: "error",
@@ -99,6 +111,12 @@ const Login = () => {
             try {
               await signInWithEmailAndPassword(auth, correo, contraseña);
               // Inicio de sesión exitoso
+                Swal.fire({
+                  icon: "success",
+                  title: "¡Inicio de sesión exitoso!",
+                  text: "Bienvenido de nuevo."
+                });
+             
             } catch (error) {
               Swal.fire({
                 icon: "error",
@@ -107,37 +125,58 @@ const Login = () => {
               });
             }
           }
-        }
-        
-        
+  };
 
-    return (
-      <div className='main-container'>
-        <div className="form-container">
-            
-                <form onSubmit={functAutenticacion}>
-                  <div className="titf">
-                  <h2>{registrando ? "Registrate" : "Inicia Sesion"}</h2>
-                  </div>
-                  <label className="form-label">
-                    Correo electrónico:</label>
-                    <input type="email" className="form-input" id="email" />
-                  <br />
-                  <label className="form-label">
-                    Contraseña:</label>
-                    <input type="password" className="form-input" id="password" />
-                  <br />
-                  <div className="titf">
-                  <button className="form-button"> {registrando ? "Registrate" : "Inicia Sesion"} </button>
-                  </div>
-                </form>
-                <h4 className="formh4">{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<button className="button2" onClick={()=>setRegistrando(!registrando)}>{registrando ? "Inicia sesion" : "Registrate"}</button></h4>
-                
-                <button className="googleButton" onClick={loginGoogle}>Iniciar Sesión con Google</button> 
-                <button className="gitButton" onClick={loginGithub}>Iniciar Sesión con GitHub</button> 
-        </div>
-        </div>
-    )
-}
+  return (
+    <div className="main-container">
+      <div className="form-container">
+        <form onSubmit={functAutenticacion}>
+          <div className="titf">
+            <h2>{registrando ? "Registrate" : "Inicia Sesion"}</h2>
+          </div>
+          <label className="form-label">Correo electrónico:</label>
+          <input type="email" className="form-input" id="email" />
+          <br />
+          <label className="form-label">Contraseña:</label>
+          <div className="password-input-container">
+            <input
+              type={passwordInputType}
+              className="form-input"
+              id="password"
+            />
+            <button
+              type="button"
+              className="toggle-password"
+              onClick={togglePasswordVisibility}
+            >
+              <i className={`fas fa-eye${showPassword ? '-slash' : ''}`} />
+            </button>
+          </div>
+          <br />
+          <div className="titf">
+            <button className="form-button">
+              {registrando ? "Registrate" : "Inicia Sesion"}
+            </button>
+          </div>
+        </form>
+        <h4 className="formh4">
+          {registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}
+          <button
+            className="button2"
+            onClick={() => setRegistrando(!registrando)}
+          >
+            {registrando ? "Inicia sesion" : "Registrate"}
+          </button>
+        </h4>
+        <button className="googleButton" onClick={loginGoogle}>
+          Iniciar Sesión con Google
+        </button>
+        <button className="gitButton" onClick={loginGithub}>
+          Iniciar Sesión con GitHub
+        </button>
+      </div>
+    </div>
+  );
+};
 
 export default Login;
