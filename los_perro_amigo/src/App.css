@@ -1,0 +1,379 @@
+/* Estilos para el contenedor principal */
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 255, 255);
+}
+
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../src/img/descarga.png');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+
+
+/* Estilos para el formulario */
+.form-container {
+  align-items: center;
+  color: white;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(10, 10, 78, 0.945); /* Fondo blanco para el contenedor */
+  box-shadow: 0 0 20px rgb(255, 255, 255); /* Sombra para el contenedor */
+  min-width: 300px;
+}
+.titf {
+  text-align: center;
+}
+
+/* Estilos para los campos del formulario */
+.form-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  width: 100%;
+}
+
+.form-input {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  width: 100%;
+}
+
+/* Estilos para el botón de registro */
+.form-button {
+  background-color: #002efa;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgb(255, 255, 255); /* Sombra para el contenedor */
+  width: 100%;
+}
+
+.form-button:hover {
+  background-color: #0a089c;
+}
+
+.formh4 {
+  margin-top: 10px;
+  margin-left: 2%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+}
+.button2 {
+  margin-top: 2px;
+  background: rgba(10, 10, 78, 0.226); 
+  color: lightblue;
+  cursor: pointer;
+  border: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}   
+
+/* Estilos para el home */
+
+.h22 {
+  color: white;
+  font-size: xx-large;
+}
+
+/* Boton Google */
+
+.googleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f44e42; /* Color principal de Google */
+  color: #fff;
+  border: none;
+  max-height: 35px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.googleButton:hover {
+  background-color: #b83f1a; /* Color de fondo al pasar el mouse */
+}
+
+.googleButton::before {
+  content: "G"; /* Agrega la letra "G" como contenido antes del botón */
+  font-size: 24px; /* Tamaño de fuente */
+  font-weight: bold; /* Poner en negrita */
+  margin-right: 10px; /* Espacio a la derecha del "G" */
+}
+
+/* Boton Git */
+
+.gitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #699bec; /* Color principal de Google */
+  color: #fff;
+  border: none;
+  max-height: 35px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.gitButton:hover {
+  background-color: #3e66a5; /* Color de fondo al pasar el mouse */
+}
+
+.gitButton::before {
+  content: "G"; /* Agrega la letra "G" como contenido antes del botón */
+  font-size: 24px; /* Tamaño de fuente */
+  font-weight: bold; /* Poner en negrita */
+  margin-right: 10px; /* Espacio a la derecha del "G" */
+  color: black;
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 100%;
+  }
+}
+
+ .form-container {animation: 1s ease 0s 1 normal forwards;} 
+
+ @keyframes form-container {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/*home*/
+.TTComponent {
+  text-align: center;
+  background: rgba(10, 10, 78, 0.945); /* Fondo blanco para el contenedor */ 
+  border: 2px solid rgb(16, 23, 87); 
+  border-radius: 10px; 
+  width: 375px; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+  overflow: hidden; 
+  cursor: pointer; 
+  transition: transform 0.3s, width 0.3s, height 0.3s, top 0.3s, left 0.3s; 
+  z-index: 1; 
+  display: grid;
+
+}
+
+.TTComponent h2 {
+  margin-top: 0px;
+  font-size: 1.5rem; 
+  margin-bottom: 10px; 
+  color: #fff; 
+}
+
+
+.divbotones {
+margin-bottom: 0px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 10px;
+list-style: none;
+padding: 0;
+margin-top: 20px; 
+}
+
+.btn-item {
+margin-bottom: 10px;
+margin-top: 8px;
+background-color: #1373b3;
+padding: 15px;
+border: none;
+height: 60px;
+width: 200px;
+border-radius: 25px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+transition: transform 0.2s, background-color 0.2s;
+color: #fff;
+text-align: center;
+cursor: pointer;
+}
+
+.btn-item:hover {
+transform: scale(1.05);
+background-color: #2980b9;
+}
+
+
+.cam {
+border-radius: 10px;
+grid-template-columns: 1fr;
+margin-left: auto;
+margin-right: auto;
+background-color: grey;
+align-items: center;
+display: grid;
+justify-content: center;
+width: 360px;
+height: 300px;
+color: black;
+z-index: 1;
+visibility: visible;
+}
+
+.camera {
+margin-top: auto;
+margin-bottom: auto;
+margin-right: auto;
+margin-left: auto;
+width: 280px;
+height: 220px;
+border-radius: 10px;
+background-color: grey;
+border-color: black;
+border: 3px solid black;
+z-index: 1;
+display: flex;
+visibility: visible;
+}
+
+.btncam {
+height: 50px;
+text-align: center;
+background-color: darkslategray; 
+color: #fff; 
+z-index: 1;
+display: flex;
+visibility: visible;
+align-items: center;
+margin: 0 auto; 
+border-radius: 8px;
+transition: background-color 0.3s, transform 0.2s;
+cursor: pointer;
+}
+
+.btncam:hover {
+background-color: #2980b9; 
+transform: translateY(-2px);
+}
+
+.camara{
+margin-left: auto;
+margin-right: auto;
+width: 260px;
+display: flex;
+}
+
+
+@media only screen and (max-width: 600px) {
+.camara {
+width: 90%; 
+height: auto; 
+}
+}
+
+@media only screen and (max-width: 600px) {
+.btncam {
+  width: 100%; 
+ }
+}
+
+@media only screen and (max-width: 600px) {
+.camera {
+  width: 90%; 
+  height: auto; 
+}
+}
+
+@media only screen and (max-width: 600px) {
+.cam {
+  width: 90%; 
+  height: auto; 
+}
+}
+
+@media only screen and (max-width: 600px) {
+.btn-item {
+  width: 100%; 
+}
+}
+
+@media only screen and (max-width: 600px) {
+.TTComponent {
+  width: 90%; 
+  height: auto; 
+}
+}
+
+/*Show*/
+
+.container-show {
+  background: rgba(10, 10, 78, 0.945);
+  min-width: 600px;
+  border-radius: 10px;
+}
+
+/*edit*/
+
+.contenedor-edit {
+  background: rgba(10, 10, 78, 0.945);
+  min-width: 600px;
+  border-radius: 10px;
+  
+}
+
+.tit-edit {
+  color: white;
+  text-align: center;
+}
+
+/*create*/
+
+.contenedor-create {
+  background: rgba(10, 10, 78, 0.945);
+  min-width: 600px;
+  border-radius: 10px;
+  
+}
+
+.tit-create {
+  color: white;
+  text-align: center;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .container-show,
+  .contenedor-edit,
+  .TTComponent,
+  .form-container,
+  .contenedor-create {
+    min-width: 90%;
+  }
+}
